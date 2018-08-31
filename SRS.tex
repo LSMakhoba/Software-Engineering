@@ -1,0 +1,401 @@
+\documentclass[11 pt]{article}
+
+\usepackage{graphicx}
+
+\usepackage{setspace}
+\setstretch{1.5}
+
+\begin{document}  
+  \begin{titlepage}
+\begin{center}
+\huge{\bfseries{Software Requirements Specifications:}}\\
+[2mm]
+\huge{\bfseries{Dental Clinic Management System}}\\
+Version 1.0\\
+  \vskip 0.2in
+ Prince Ngema (754774)\\
+ Tholithemba Mngomezulu (1512124)\\
+ Luyanda Makhoba (834867) \\
+ Takatso Molekane (569869)\\
+ 
+ 
+
+\end{center}
+ \end{titlepage}
+ \tableofcontents
+ \newpage
+\section{Introduction}\label{sec:intro}
+Managing a dental clinic may be cumbersome at times, the paperwork that the receptionist have to do and the time  patients have to spend waiting on the queue just to make an appointment. DCMS is system that will remedy this situation.
+\subsection{Purpose}
+The purpose of this document is to provide a detailed description of the DCMS ,a web application.It will give in detail the purpose of the system, features of the system  and the constraints under which the system will operate.
+ \subsubsection{Intended Audience}
+ \begin{itemize}
+\item
+Developers-It will provide guidelines for them on features to develop and help plan accordingly which functional requirements will need to be implemented.It will facilitate the programming process.\\
+\item
+Testing/Quality assurance team-It will assist them in putting together the testing plan and identifying bugs in the software.\\
+\item
+Product Owner(Client)- It will help verify the project deliverables and have documentation that outlines what the software will do.\\(CHANGE THIS, could add end user)
+\end{itemize}
+\subsection{Scope}
+DCMS (Dental Clinic Management System) is a web application that provides support for managing the services of a small dental clinic.
+\subsubsection{Software Benefits and Objectives}
+The software is aimed at replacing manual paper systems that currently exists at a dental clinic.
+Users will remotely have access to relevant services based on requirements.
+Having a digital filing system will reduce human error by having text validations before data is captured. Having database will allow for backups.
+\subsubsection{Users Roles}
+There are four basic users namely Dentist, patient, Receptionist and Administrator. Each of these user roles will have different goals when interacting with the software.
+\begin{itemize}
+\item
+A Dentist can login ,view and set their own schedule of appointments. Write out a prescription for a patient and view a patient's profile(medical record).
+\item
+A new patient provides personal details to register as a patient on the system.Returning patients do not need to register,they just login using their username and password.They can also at any time update those personal details. They can then book an appointment. Patients can view their health  records, prescriptions, medical expenses and comment on the services provided.
+\item
+The receptionist logs in with their username and password, views and manages  appointments, performs day open and close activities. He also sends reports to admin and help with registering those patients who that are having problems with registering.
+\item
+The administrator has the authority to add or remove a doctors and receptionist.He grants permission to receptionist  and  dentists the authority to view and generates report.He also has the authority to add or delete patients from system. He also manages the system
+\end{itemize}
+
+\subsection{Definitions,Acronyms and Abbreviations}
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+\textbf{Term} & \textbf{Definition}\\
+\hline
+DCMS &  A Dental Clinic Management System application\\
+\hline
+User &  Anyone who will be interacting directly with the system..\\
+\hline
+Netbeans & an integrated development environment for java\\
+\hline
+Java & A general-purpose computer-programming language that is concurrent, class-based,object-oriented\\
+\hline
+PHP & Hypertext Preprocessor is a server-side scripting language designed for web development. \\
+\hline
+Json JavaScript Object Notation is an open-standard file format that uses human readable text to transmit data objects consisting of attribute-value pairs and array data types \\
+\hline
+\end{tabular}
+
+\subsection{References}
+\begin{itemize}
+    \item    
+    IEEE Recommended Practice for Software Requirements Specifications
+    \item
+    https://www.bmc.com/blogs/software-requirements-specification-how-to-write-srs-with-examples/ (Accessed Aug 2018)
+    \item
+    Zainab Murtadha- Dentist Web Based Patient Information System and Services in Cloud
+    \item
+    Virtual Medical Home SRS-Bapuju Institute
+    \end{itemize}
+    \newpage
+
+\subsection{Overview}
+\textbf{Front End tasks:}
+    This involves the making of User Interfaces. These are the screens that the users will be seeing when using the system.
+    \begin{itemize}
+    \item
+    Create Patient(Input will be patient details)
+    \item
+    Log in(Username and Password)
+    \item
+    Create Appointment(PatientId and Date/Time)
+    \item
+    Create Bill(PatientID, DoctorID and Consultation Details)
+    \item
+    View Schedule(DoctorID and Date/Time)
+    \item
+    View Bill(PatientID)
+    \end{itemize}
+    \textbf{Back End tasks:}
+    \begin{itemize}
+    \item
+    Create Database with table and entities as listed in ERD
+    \item
+    Use back-end frameworks to build server-side software. PHP and JSON    
+    \item
+    Cloud computing integration-Allowing Database to be accessed remotely.
+    \end{itemize}
+
+\subsubsection{Existing System}
+The present system is manual based. It involves paper work in the form of mantaining files, making appointments and billing.The manually based system has the following disadvantages:
+\begin{itemize}
+\item
+it is a limited system.
+\item
+looking for a patient's file may take a long time
+\item
+patients have to queue to make an appointment
+\item
+There is no backup files.
+\item
+files are prone to damage.
+\item
+editing file problems.
+storage space may be limited.
+\item
+Patient's personal information is not protected, it can be accessed by anyone.
+\end{itemize}
+
+\subsubsection{Proposed System}
+DCMS is an automated system that can be accessed via the internet.It has the following advantages.
+\begin{itemize}
+\item
+ Easy to store and search for files.
+ \item
+ Patients can make appointments online and avoid long queues.
+ \item
+ Each patient has a profile that can only be accessed by authorized users i.e(doctor or receptionist).
+ \item
+ The system can be accessed remotely.
+ 
+
+
+\end{itemize}
+
+\section{Overall description}
+\newpage
+    \subsection{Productive perspective}    
+    DCMS is a web application  that will work on any device that can access the internet and meet the minimum specifications.
+    \subsubsection{Architecture}
+    
+    \begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=\linewidth]{architecture.png}
+    \caption{architecture}
+    \end{figure}
+    \newpage
+    \subsubsection{Entity Relationship Diagram}
+
+    \begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=\linewidth]{Dentist ERD.png}
+    \caption{DCMS-ERD}
+    \label{fig:ERD}
+    \end{figure}
+    
+    \subsubsection{Software Tools}
+    \begin{itemize}
+    \item\begin{itemize}
+
+
+\end{itemize}
+     Database Server: Microsoft SQL Server
+    \item
+     Client: Any web browser
+     \item
+     Programming Language:Java
+     \item
+     Development Tools:Netbeans IDE 8.2
+    \end{itemize}
+    
+    \subsubsection{Hardware Requirements}
+The supported Operating Systems:
+\begin{itemize}
+
+\item
+        \textbf{Microsoft Windows Vista SP1/Windows 7 Professional:}
+        \begin{itemize}
+        
+            \item
+            Processor: 800MHz Intel Pentium III or equivalent
+            \item
+            Memory: 512 MB
+            \item
+            Disk space: 750 MB of free disk space
+            \end{itemize}
+\item
+        \textbf{Ubuntu 9.10:}
+        \begin{itemize}
+        \item
+            Processor: 800MHz Intel Pentium III or equivalent
+            \item
+            Memory: 512 MB
+            \item
+            Disk space: 650 MB of free disk space
+            \end{itemize}
+        \item
+        \textbf{Macintosh OS X 10.7 Intel:}
+        \begin{itemize}
+        
+            \item
+            Processor: Dual-Core Intel
+            \item
+            Memory: 2 GB
+            \item
+            Disk space: 650 MB of free disk space
+            \end{itemize}
+            \item
+            \textbf{Smartphone Requirements:}
+\begin{itemize}
+
+\item
+    Android running OS 4.0+
+    \item
+    iPhone running iOS 8+
+    \item
+    Windows Phone 8.1+
+\end{itemize}
+\end{itemize}
+    \subsection{Product functions}
+DCMS will enable patients to book or make appointment and the output will the be date and time in which it is inline with the Doctors schedule. System will
+    also provide a clear schedule which allows patients to see
+    which Doctor is available at a particular slot. Who ever
+    will be using the system has to go through registration
+    first if he/she is first time user or login by providing
+    username and password to access the DCMS.The system allows patients to request their bill and the patient can view or print the through system.
+\subsection{Business Rules}
+    \begin{itemize}
+    \item
+    Before a user can log in, they are required to be an existing user on the System. Existing users access the system (log in) using username and password.
+    \begin{itemize}
+    \item
+    New Dentists and Receptionist's require an Administrators authorization to be registered on the system.
+    \item
+    A new patient is required to enter their personal and medical details.
+    \end{itemize}
+    \item
+    An Appointment must be booked by the patient. They have the options of doing so telephonically(Where the receptionist will be the one capturing the appointment) or engaging directly with the system. Booking of an appointment requires viewing the relevant dentist's schedule to identify available slots.
+    \item
+    A Dentist can view their schedule. This means viewing all the appointments that have been booked for the doctor and displayed as of their requirement either Daily,Weekly or Monthly schedule calendar view.
+    \item
+    A consultation is created by a dentist. This follows the arrival of a patient for their appointment and discussions or dental procedures are conducted and recorded. A consultation can also be recorded for a patients failure to arrive for an appointment without cancelling. This consultation type is labelled as missed appointment.
+    \item
+    Generating Bill follows a consultation, this is where all the costs of the medical procedure are recorded. This may also include the recording of a missed appointment charge.
+    \item
+    Authorization is done by an administrator. This is required when new a receptionist or dentist is created. Similarly so when it will be updated or deleted.
+    \end{itemize}
+    
+    
+    \subsubsection{Use Cases}
+    
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+\textbf{Actor} & \textbf{Description}\\
+\hline
+\textbf{Receptionist} & May assist patient with registration and booking, should they require assistance.\\
+\hline
+\textbf{Administrator}& Administrator is responsible for Doctors registration and other issues that directly related to the system like update or archive if necessary.\\
+\hline
+\textbf{Patient}& Patient may directly interact with the system during registration or booking process, depending on the patient's level of of computer literacy\\
+\hline
+\textbf{Doctor}& May set appointment with the patient, depending on patient's problem \\
+\hline
+
+\end{tabular}
+$\_$
+\\\\\\
+
+\begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+\textbf{Use Case} & \textbf{Description} & \textbf{Related Use case and Relationships} \\
+\hline
+\textbf{Create Patient} & Patient or the Receptionist will interact with this use case. Step involved in this use case is entering demographic data.  &\\
+\hline
+\textbf{Read Patient}& This use case will be used when accessing a patient's data.This includes when making appointment bookings and generating bills & Invoked by the Update Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship.\\
+\hline
+\textbf{Update Patient}& The Receptionist or Patient will mainly interact with this use case. It will be accessed to update a Patient's demographic data & This use case invokes the Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
+\hline
+\textbf{Create Administrator}& An Administrator will interact with this use case. In order for Administrator to have an access to the system, an already existing Administrator should capture relevant data of new Administrator &\\
+\hline
+\textbf{Create Appointment}& The Patient,Receptionist or Doctor will interact with this use case. This use case will be triggered when a user wants to make an appointment. & This use case invokes read doctor and read patient\\
+
+\hline
+\textbf{Create Bill}& The Doctor will interact with this use case. This Involves capturing all charges of operations done on a patient during a consultation. & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
+\hline
+\textbf{Read Bill}& The Doctor,Patient or Receptionist will interact with this use case. This Involves viewing and existing bill.  & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
+\hline
+\end{tabular}
+\begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+\textbf{Read Administrator}& The Administrator will interact with this use case. It will be triggered when Administrator request to view Administrator's profile. & This use case invokes the Update Administrator use case. $\textless\textless$include$\textgreater\textgreater$ relationship.\\
+\hline
+\textbf{Update administrator}& An Administrator will interact with this use case. It will be triggered when there is a change in the demographic data of the Administrator. & This use case invokes the Read Administrator use case. $\textless\textless$include$\textgreater\textgreater$ relationship.\\
+\hline
+\textbf{Archive Administrator}& Administrator will interact with this use case. it will be triggered by the other Administrator to archive an Administrator who no longer has an access to the system due to end employment contract or other reasons.  &\\
+\hline
+\textbf{Create Doctor}& An Administrator will interact with this use case. It will capture Doctor's demographic data. &\\
+\hline
+\textbf{Read Doctor}& This use case is used when a doctors profile will need to be accessed. This will include when booking appointments, recording consultations and generating bill. It will be triggered when a user requests to view Doctor's details & \\
+\hline
+\textbf{Update Doctor}& Administrator will interact with this use case. It will be triggered when an Administrator wants to modify Doctor's details & This use case invokes the Read Doctor use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
+\hline
+\textbf{Archive Doctor}& Administrator will interact with this use case. It will be triggered when the Doctor no longer granted access to the system due to end of employment contract or other reason &\\
+\hline
+\textbf{Generate Report}& The Project Owner will interact with this use case. It will be accessed when the Project Owner wants to assess the effectiveness of the system. &\\
+\hline
+\end{tabular}
+
+
+\section{Fully Dressed Use Case}
+
+\subsection{Create Patient Use Case}
+
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+\textbf{Use case name:}& Create Patient\\
+\hline
+\textbf{Scope:}& Dental Clinical Management System for better health.\\
+\hline
+\textbf{Triggering Event:}& User request to create patient.\\
+\hline
+\textbf{Brief description:}& user request to create a new Patient profile. Either the Patient themselves via mobile phone, desktop, self-service terminal or Receptionist on behalf of the Patient.A form is displayed and prompt for the completion of all relevant data, including: The Patient's firstname, lastname, ID number, date of birth and email(if applicable). A prompt to confirm and save the profile is displayed. The user can double-check the entered data and confirm the creation of the profile. The profile is then created by creating a new record in the Patient table in the data store. Login details are generated and sent to the patient.\\
+\hline
+\textbf{Actor(s):}& Patient (Primary), Receptionist (Primary)\\
+\hline
+\textbf{Related use cases:}& N/A\\
+\hline
+\textbf{Stakeholders and interests:}& 1. \textbf{Patient} - wants all their demographic data (firstname, lastname, ID number, date of birth, mobile number and email address(optional)) to be accurately captured to ensure the completion of their profiles. 2. \textbf{Receptionist} - wants to accurately capture Patient's demographic data (firstname, lastname, ID number, date of birth, mobile number and email address(optional)) on behalf of a computer illiterate Patient.\\
+\hline
+\textbf{Pre-condition:}& N/A\\
+\hline
+\textbf{Post-condition:}& 1. Created Patient's profile recorded in the Patient's data store.  2. Login details are generated and sent to the Patient.\\
+\hline
+\end{tabular}
+
+\subsection{Create Appointment Use Case}
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+\textbf{Use case name:}& Create Appointment\\
+\hline
+\textbf{Scope:}& Dental Clinical Management System for better health.\\
+\hline
+\textbf{Triggering event:}& user request to create Appointment.\\
+\hline
+\textbf{Brief description:}& user request to create new Appointment.This involves Doctor's schedule where patient can select date and time available in the slot. Receptionist may also create appointment on behalf of patient. in case of emergency or serious problem depending on the condition of a patient a Doctor may also create appointment. Patient ID must be read first then time and date has to be selected on the Doctor's schedule and after successful booking confirmation message has to be generated and sent to the patient via email.    \\
+\hline
+\textbf{Actor(s):}& Patient (primary), Doctor (primary), Receptionist (primary).\\
+\hline
+\textbf{Related use cases:}& Read Patient (includes), create consultation (extends).\\
+\hline
+\textbf{Stakeholders and interests:}& \textbf{Patient}- wants to make sure that appointment is done accordingly. 2. \textbf{Receptionist}- wants to accurately make appointment on behalf of those patients who have lack of computer skills. \textbf{Doctor}- wants to make appointment that is urgently and need serious attention. \\
+\hline
+\textbf{Pre-condition}& Patient must exist in the database.\\
+\hline
+\textbf{Post-condition}& Confirmation message must be send via email.\\
+\hline
+\end{tabular}
+\newpage
+\subsubsection{Use Case Diagram}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale = 0.5]{Use Case Diagram.png}
+    \caption{DCMS-ERD}
+    \label{fig:ERD}
+    \end{figure}
+
+    \subsection{Constraints}
+    \begin{itemize}
+    \item
+    DCMS must run on any platform that supports Java.
+    \item
+    Data captured should be stored on a “cloud” database.
+    \item
+    The user needs to be connected to the internet.
+    \end{itemize}
+    
+    
+ \end{document}
+
+

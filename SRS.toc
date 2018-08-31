@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}Purpose}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}Intended Audience}{2}
+\contentsline {subsection}{\numberline {1.2}Scope}{3}
+\contentsline {subsubsection}{\numberline {1.2.1}Software Benefits and Objectives}{3}
+\contentsline {subsubsection}{\numberline {1.2.2}Users Roles}{3}
+\contentsline {subsection}{\numberline {1.3}Definitions,Acronyms and Abbreviations}{5}
+\contentsline {subsection}{\numberline {1.4}References}{5}
+\contentsline {subsection}{\numberline {1.5}Overview}{7}
+\contentsline {subsubsection}{\numberline {1.5.1}Existing System}{7}
+\contentsline {subsubsection}{\numberline {1.5.2}Proposed System}{8}
+\contentsline {section}{\numberline {2}Overall description}{8}
+\contentsline {subsection}{\numberline {2.1}Productive perspective}{9}
+\contentsline {subsubsection}{\numberline {2.1.1}Architecture}{9}
+\contentsline {subsubsection}{\numberline {2.1.2}Entity Relationship Diagram}{10}
+\contentsline {subsubsection}{\numberline {2.1.3}Software Tools}{10}
+\contentsline {subsubsection}{\numberline {2.1.4}Hardware Requirements}{11}
+\contentsline {subsection}{\numberline {2.2}Product functions}{11}
+\contentsline {subsection}{\numberline {2.3}Business Rules}{12}
+\contentsline {subsubsection}{\numberline {2.3.1}Use Cases}{13}
+\contentsline {section}{\numberline {3}Fully Dressed Use Case}{16}
+\contentsline {subsection}{\numberline {3.1}Create Patient Use Case}{16}
+\contentsline {subsection}{\numberline {3.2}Create Appointment Use Case}{17}
+\contentsline {subsubsection}{\numberline {3.2.1}Use Case Diagram}{18}
+\contentsline {subsection}{\numberline {3.3}Constraints}{18}
