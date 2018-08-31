@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 
 \usepackage{setspace}
-\setstretch{1.5}
+\setstretch{1.25}
 
 \begin{document}  
   \begin{titlepage}
@@ -28,7 +28,6 @@ Version 1.0\\
 Managing a dental clinic may be cumbersome at times, the paperwork that the receptionist have to do and the time  patients have to spend waiting on the queue just to make an appointment. DCMS is system that will remedy this situation.
 \subsection{Purpose}
 The purpose of this document is to provide a detailed description of the DCMS ,a web application.It will give in detail the purpose of the system, features of the system  and the constraints under which the system will operate.
- \subsubsection{Intended Audience}
  \begin{itemize}
 \item
 Developers-It will provide guidelines for them on features to develop and help plan accordingly which functional requirements will need to be implemented.It will facilitate the programming process.\\
@@ -71,7 +70,7 @@ Java & A general-purpose computer-programming language that is concurrent, class
 \hline
 PHP & Hypertext Preprocessor is a server-side scripting language designed for web development. \\
 \hline
-Json JavaScript Object Notation is an open-standard file format that uses human readable text to transmit data objects consisting of attribute-value pairs and array data types \\
+Json & JavaScript Object Notation is an open-standard file format that uses human readable text to transmit data objects consisting of attribute-value pairs and array data types \\
 \hline
 \end{tabular}
 
@@ -176,10 +175,7 @@ DCMS is an automated system that can be accessed via the internet.It has the fol
     
     \subsubsection{Software Tools}
     \begin{itemize}
-    \item\begin{itemize}
-
-
-\end{itemize}
+    \item
      Database Server: Microsoft SQL Server
     \item
      Client: Any web browser
@@ -301,10 +297,7 @@ $\_$
 \textbf{Create Appointment}& The Patient,Receptionist or Doctor will interact with this use case. This use case will be triggered when a user wants to make an appointment. & This use case invokes read doctor and read patient\\
 
 \hline
-\textbf{Create Bill}& The Doctor will interact with this use case. This Involves capturing all charges of operations done on a patient during a consultation. & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
-\hline
-\textbf{Read Bill}& The Doctor,Patient or Receptionist will interact with this use case. This Involves viewing and existing bill.  & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
-\hline
+
 \end{tabular}
 \begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
 \hline
@@ -318,6 +311,15 @@ $\_$
 \hline
 \textbf{Read Doctor}& This use case is used when a doctors profile will need to be accessed. This will include when booking appointments, recording consultations and generating bill. It will be triggered when a user requests to view Doctor's details & \\
 \hline
+
+\end{tabular}
+
+\begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
+\hline
+\textbf{Create Bill}& The Doctor will interact with this use case. This Involves capturing all charges of operations done on a patient during a consultation. & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
+\hline
+\textbf{Read Bill}& The Doctor,Patient or Receptionist will interact with this use case. This Involves viewing and existing bill.  & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
+\hline
 \textbf{Update Doctor}& Administrator will interact with this use case. It will be triggered when an Administrator wants to modify Doctor's details & This use case invokes the Read Doctor use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
 \hline
 \textbf{Archive Doctor}& Administrator will interact with this use case. It will be triggered when the Doctor no longer granted access to the system due to end of employment contract or other reason &\\
@@ -325,7 +327,6 @@ $\_$
 \textbf{Generate Report}& The Project Owner will interact with this use case. It will be accessed when the Project Owner wants to assess the effectiveness of the system. &\\
 \hline
 \end{tabular}
-
 
 \section{Fully Dressed Use Case}
 

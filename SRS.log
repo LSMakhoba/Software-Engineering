@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  31 AUG 2018 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  31 AUG 2018 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -57,8 +57,11 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
+) (./SRS.aux
+
+LaTeX Warning: Label `fig:ERD' multiply defined.
+
 )
-No file SRS.aux.
 \openout1 = `SRS.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -73,7 +76,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count88
 \scratchdimen=\dimen105
@@ -136,244 +139,184 @@ e
 ))
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-No file SRS.toc.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./SRS.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `SRS.toc'.
 
-[1]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[2] [3]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 60.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 60.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 60.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-[]\OT1/cmr/m/n/10.95 Json JavaScript
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
  []
 
-
-Underfull \hbox (badness 5359) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 Ob-ject No-ta-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 is an open-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 standard file
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 hu-man read-able
- []
-
-
-Underfull \hbox (badness 1178) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 text to trans-mit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 data ob-jects
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 con-sist-ing of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 attribute-value
- []
-
-
-Underfull \hbox (badness 3735) in paragraph at lines 74--75
-\OT1/cmr/m/n/10.95 pairs and ar-ray
- []
-
-
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 60--77
+[2]
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 59--76
 [] 
  []
 
-[4]
-Overfull \hbox (4.17911pt too wide) in paragraph at lines 83--85
+[3]
+Overfull \hbox (4.17911pt too wide) in paragraph at lines 82--84
 []\OT1/cmr/m/n/10.95 https://www.bmc.com/blogs/software-requirements-specificat
 ion-how-
  []
 
-[5] [6] [7] [8] <architecture.png, id=36, 1516.66624pt x 1357.07pt>
+[4] [5] [6] <architecture.png, id=30, 1516.66624pt x 1357.07pt>
 File: architecture.png Graphic file (type png)
 
 <use architecture.png>
-Package pdftex.def Info: architecture.png used on input line 163.
+Package pdftex.def Info: architecture.png used on input line 162.
 (pdftex.def)             Requested size: 360.0pt x 322.1004pt.
- [9 <./architecture.png>]
+ [7 <./architecture.png>]
 
-LaTeX Warning: File `Dentist ERD.png' not found on input line 172.
+LaTeX Warning: File `Dentist ERD.png' not found on input line 171.
 
-<Dentist ERD.png, id=42, 774.895pt x 549.05125pt>
+<Dentist ERD.png, id=36, 774.895pt x 549.05125pt>
 File: Dentist ERD.png Graphic file (type png)
  <use Dentist ERD.png>
-Package pdftex.def Info: Dentist ERD.png used on input line 172.
+Package pdftex.def Info: Dentist ERD.png used on input line 171.
 (pdftex.def)             Requested size: 360.0pt x 255.07999pt.
 
-[10 <./Dentist ERD.png>] [11] [12]
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 272--288
+[8 <./Dentist ERD.png>] [9]
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 268--284
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--288
+Underfull \hbox (badness 10000) in paragraph at lines 268--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--288
+Underfull \hbox (badness 10000) in paragraph at lines 268--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--288
+Underfull \hbox (badness 10000) in paragraph at lines 268--284
 
  []
 
-
-Underfull \hbox (badness 3302) in paragraph at lines 295--295
+[10]
+Underfull \hbox (badness 3302) in paragraph at lines 291--291
 \OT1/cmr/m/n/10.95 data.This in-cludes when
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 295.
+LaTeX Warning: Command \textless invalid in math mode on input line 291.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 295.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 291.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 295.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 291.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 295.
+LaTeX Warning: Command \textless invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 295.
+LaTeX Warning: Command \textless invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 295.
+LaTeX Warning: Command \textless invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 295.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 295.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 295.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 295.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 291.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 []\OT1/cmr/m/n/10.95 Invoked by the Up-
  []
 
 
-Underfull \hbox (badness 8132) in paragraph at lines 295--296
+Underfull \hbox (badness 8132) in paragraph at lines 291--292
 \OT1/cmr/m/n/10.95 date Pa-tient use case.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 [][]$\OT1/cmr/m/n/10.95 include$[][]$ re-la-tion-
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 297--297
+Underfull \hbox (badness 1325) in paragraph at lines 293--293
 []\OT1/cmr/m/n/10.95 The Re-cep-tion-ist or Pa-
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 297.
+LaTeX Warning: Command \textless invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 297.
+LaTeX Warning: Command \textless invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 297.
+LaTeX Warning: Command \textless invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 297.
+LaTeX Warning: Command \textless invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 297.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 297.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 297.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 293.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 297.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 293.
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 297--298
+Underfull \hbox (badness 4819) in paragraph at lines 293--294
 \OT1/cmr/m/n/10.95 Read Pa-tient use case.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 297--297
 []\OT1/cmr/bx/n/10.95 Create Ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 297--297
 []\OT1/cmr/m/n/10.95 The Pa-tient,Receptionist
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 301--301
+Underfull \hbox (badness 5175) in paragraph at lines 297--297
 \OT1/cmr/m/n/10.95 or Doc-tor will in-ter-act
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 304--304
-[]\OT1/cmr/m/n/10.95 The Doc-tor will in-ter-
- []
-
-
-Underfull \hbox (badness 2735) in paragraph at lines 304--304
-\OT1/cmr/m/n/10.95 act with this use case.
- []
-
-
 LaTeX Warning: Command \textless invalid in math mode on input line 304.
 
 
@@ -396,16 +339,6 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 304.
 
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 304.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-[]\OT1/cmr/m/n/10.95 The Doc-tor,Patient or
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\OT1/cmr/m/n/10.95 In-volves view-ing and
- []
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 306.
@@ -432,200 +365,217 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 306.
 LaTeX Warning: Command \textgreater invalid in math mode on input line 306.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
-
-
-Underfull \hbox (badness 4543) in paragraph at lines 313--314
+Underfull \hbox (badness 4543) in paragraph at lines 306--307
 \OT1/cmr/m/n/10.95 Read Ad-min-is-tra-tor use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
 []\OT1/cmr/bx/n/10.95 Archive Ad-
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 315--315
+Underfull \hbox (badness 1629) in paragraph at lines 308--308
 \OT1/cmr/m/n/10.95 Ad-min-is-tra-tor to archive
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
-
-
-Underfull \hbox (badness 6236) in paragraph at lines 321--322
-\OT1/cmr/m/n/10.95 Read Doc-tor use case.
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 323--323
-\OT1/cmr/m/n/10.95 end of em-ploy-ment con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
-[]\OT1/cmr/bx/n/10.95 Generate Re-
- []
-
-
-Overfull \hbox (34.43306pt too wide) in paragraph at lines 289--328
+Overfull \hbox (34.43306pt too wide) in paragraph at lines 285--316
 [][]
  []
 
 
-Overfull \hbox (17.43306pt too wide) in paragraph at lines 289--328
+Overfull \hbox (17.43306pt too wide) in paragraph at lines 285--316
 [] 
  []
 
+[11] [12]
+Overfull \vbox (16.49973pt too high) has occurred while \output is active []
+
+
 [13]
-Overfull \vbox (313.49997pt too high) has occurred while \output is active []
+Underfull \hbox (badness 6725) in paragraph at lines 319--319
+[]\OT1/cmr/m/n/10.95 The Doc-tor will in-ter-
+ []
 
 
-[14]
-Overfull \vbox (497.10005pt too high) has occurred while \output is active []
+Underfull \hbox (badness 2735) in paragraph at lines 319--319
+\OT1/cmr/m/n/10.95 act with this use case.
+ []
 
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+LaTeX Warning: Command \textless invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 319.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+[]\OT1/cmr/m/n/10.95 The Doc-tor,Patient or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+\OT1/cmr/m/n/10.95 In-volves view-ing and
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 323.
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 323--324
+\OT1/cmr/m/n/10.95 Read Doc-tor use case.
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 325--325
+\OT1/cmr/m/n/10.95 end of em-ploy-ment con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+[]\OT1/cmr/bx/n/10.95 Generate Re-
+ []
+
+
+Overfull \hbox (34.43306pt too wide) in paragraph at lines 317--330
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []\OT1/cmr/bx/n/10.95 Triggering
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--342
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
 []\OT1/cmr/bx/n/10.95 Brief de-scrip-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 []\OT1/cmr/bx/n/10.95 Related use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 349--349
 []\OT1/cmr/bx/n/10.95 Stakeholders
  []
 
 
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 334--355
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 335--356
 [] 
  []
 
+[14]
+Overfull \vbox (48.51508pt too high) has occurred while \output is active []
 
-Overfull \vbox (160.81523pt too high) has occurred while \output is active []
 
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 363--363
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 []\OT1/cmr/bx/n/10.95 Triggering
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 []\OT1/cmr/bx/n/10.95 Brief de-scrip-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []\OT1/cmr/bx/n/10.95 Related use
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 369--370
+Underfull \hbox (badness 1365) in paragraph at lines 370--371
 []\OT1/cmr/m/n/10.95 Read Pa-tient (in-cludes), cre-ate con-sul-ta-tion (ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
 []\OT1/cmr/bx/n/10.95 Stakeholders
  []
 
 
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 357--378
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 358--379
 [] 
  []
 
+[16]
 
-Overfull \vbox (8.90497pt too high) has occurred while \output is active []
+LaTeX Warning: File `Use Case Diagram.png' not found on input line 384.
 
-
-[17]
-
-LaTeX Warning: File `Use Case Diagram.png' not found on input line 383.
-
-<Use Case Diagram.png, id=70, 675.52374pt x 754.82pt>
+<Use Case Diagram.png, id=67, 675.52374pt x 754.82pt>
 File: Use Case Diagram.png Graphic file (type png)
 
 <use Use Case Diagram.png>
-Package pdftex.def Info: Use Case Diagram.png used on input line 383.
+Package pdftex.def Info: Use Case Diagram.png used on input line 384.
 (pdftex.def)             Requested size: 337.76105pt x 377.40909pt.
 
-Overfull \hbox (69.55864pt too wide) in paragraph at lines 383--384
+Overfull \hbox (69.55864pt too wide) in paragraph at lines 384--385
  [][] 
  []
 
@@ -635,29 +585,29 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-[18 <./Use Case Diagram.png>] [19] (./SRS.aux)
+[17 <./Use Case Diagram.png>] [18] (./SRS.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1573 strings out of 493029
- 22667 string characters out of 6136234
- 92824 words of memory out of 5000000
+ 1577 strings out of 493029
+ 22699 string characters out of 6136234
+ 87881 words of memory out of 5000000
  5108 multiletter control sequences out of 15000+600000
  8503 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,23p,679b,222s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,23p,679b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on SRS.pdf (20 pages, 304601 bytes).
+Output written on SRS.pdf (19 pages, 305721 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
