@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  4 SEP 2018 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  6 SEP 2018 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,7 +58,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-No file "System Testing".aux.
+(./System Testing.aux)
 \openout1 = `"System Testing.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -73,6 +73,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count88
@@ -136,56 +137,65 @@ e
 ))
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-No file "System Testing".toc.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./System Testing.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
 \tf@toc=\write3
 \openout3 = `"System Testing.toc"'.
 
-[1]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 30.
 
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 30--47
-[] 
+[1]
+
+LaTeX Warning: File `Integration Testing.png' not found on input line 36.
+
+<Integration Testing.png, id=13, 500.87125pt x 470.75874pt>
+File: Integration Testing.png Graphic file (type png)
+
+<use Integration Testing.png>
+Package pdftex.def Info: Integration Testing.png used on input line 36.
+(pdftex.def)             Requested size: 360.0pt x 338.37138pt.
+ [2 <./Integration Testing.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
  []
 
 
-LaTeX Warning: File `Dentist ERD.png' not found on input line 51.
+LaTeX Warning: File `Black Box Diagram.png' not found on input line 46.
 
-<Dentist ERD.png, id=12, 774.895pt x 549.05125pt>
-File: Dentist ERD.png Graphic file (type png)
- <use Dentist ERD.png>
-Package pdftex.def Info: Dentist ERD.png used on input line 51.
-(pdftex.def)             Requested size: 360.0pt x 255.07999pt.
+<Black Box Diagram.png, id=19, 809.0225pt x 455.7025pt>
+File: Black Box Diagram.png Graphic file (type png)
 
+<use Black Box Diagram.png>
+Package pdftex.def Info: Black Box Diagram.png used on input line 46.
+(pdftex.def)             Requested size: 360.0pt x 202.7835pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 50--65
+[] 
+ []
 
-[2] [3 <./Dentist ERD.png>] (./System Testing.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[3 <./Black Box Diagram.png>] (./System Testing.aux) ) 
 Here is how much of TeX's memory you used:
- 1526 strings out of 493029
- 21921 string characters out of 6136234
+ 1533 strings out of 493029
+ 22130 string characters out of 6136234
  80825 words of memory out of 5000000
- 5070 multiletter control sequences out of 15000+600000
+ 5072 multiletter control sequences out of 15000+600000
  8503 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,23p,242b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "System Testing.pdf" (4 pages, 103689 bytes).
+ 37i,8n,23p,242b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb>
+Output written on "System Testing.pdf" (4 pages, 130078 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 38 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

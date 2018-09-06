@@ -30,21 +30,35 @@ vector<int> primeNumbers(int X)
      
      return prime_numbers;
 }
-
-int main()
-{
-  long x;
+void CheckInput(){
+ long x;
   
   cin>>x;
-  
-
-  vector<int> only_prime = primeNumbers(x);
+vector<int> only_prime = primeNumbers(x);
   int length = only_prime.size();
-  
-	cout<<"total number of primes: "<<length<<endl;
-	for(auto c=only_prime.begin(); c!=only_prime.end(); c++)
+
+  if(cin){
+	if(x<0){
+		cout<<"Negative Integer &  Error Code 101-Negative 	int. Enter positive int."<<length<<endl;
+	
+	}else{
+		cout<<"Total number of primes: "<<length<<endl;
+	for(vector<int>::iterator c=only_prime.begin(); c!=only_prime.end(); ++c)
 	   cout<<" "<<*c;
      cout<<endl;
+
+		}
+	}else{
+	cout<<"String of char & Error Code 102-String of character.Enter positive int"<<length<<endl;
+	}
+}
+int main()
+{
+ CheckInput();
+
+  
+  
+	
   return 0;
 }
 
