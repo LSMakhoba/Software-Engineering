@@ -33,12 +33,12 @@ vector<int> primeNumbers(int X)
      
      return prime_numbers;
 }
-void checkInput(){
+void checkInput(){//Validate Input
  long x;
   
   cin>>x;
-vector<int> only_prime = primeNumbers(x);
-  int length = only_prime.size();
+vector<int> only_prime = primeNumbers(x);//Intergration 
+  int length = only_prime.size();//N-length of primes
 
   if(cin){//Checks input taken
 	if(x<0){
@@ -89,10 +89,33 @@ vector<int> test_prime(int X)
 
 void TestProg(){
 
-//Test Case 1: x=10
+//Test Case 1: x=0
 
-vector<int> vec =test_prime(10);
-if(vec == primeNumbers(20)){
+vector<int> vec =test_prime(0);
+if(vec == primeNumbers(0)){
+		cout<<"Pass test case 1"<<endl;
+}else{
+		cout<<"Failed test case 1"<<endl;
+	}
+//Test Case case 2: x=1
+vector<int> vec2 =test_prime(1);
+if(vec2 == primeNumbers(1)){
+		cout<<"Pass test case 1"<<endl;
+}else{
+		cout<<"Failed test case 1"<<endl;
+	}
+
+//Test Case case 3: x=100
+vector<int> vec3 =test_prime(10);
+if(vec3 == primeNumbers(10)){
+		cout<<"Pass test case 1"<<endl;
+}else{
+		cout<<"Failed test case 1"<<endl;
+	}
+
+//Test Case case 4: x=100
+vector<int> vec4 =test_prime(100);
+if(vec4 == primeNumbers(100)){
 		cout<<"Pass test case 1"<<endl;
 }else{
 		cout<<"Failed test case 1"<<endl;
@@ -101,9 +124,9 @@ if(vec == primeNumbers(20)){
 
 int main()
 {
- TestProg();
-  //test_prime(100);
-    
+ //TestProg();//To run the test program and see ruslts for all tests
+
+ checkInput();//Used to take input from user with relevant validtions and correct output
   return 0;
 }
 

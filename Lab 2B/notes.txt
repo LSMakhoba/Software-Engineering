@@ -1,0 +1,27 @@
+Unit Testing:
+If you’re using an object‐oriented programming language, be sure to test code that doesn’t act like
+a normal method. For example, be sure to test constructors (which execute when you make a new
+object), destructors (which execute when you destroy an object), and property accessors (which
+execute when the program gets or sets a property’s value).
+
+validation code if you write it before you write the
+routine it protects. The same applies here. You can often do a better job on a method’s unit tests if
+you write them before you write the method.
+
+You can also use conditional compilation to avoid compiling the test code in release builds so it
+doesn’t make the fi nal executable bigger
+
+Intergration Testing:
+checks that existing code calls the new method correctly, and that the new
+method can call other methods correctly.
+Locking records
+
+system testing:
+end‐to‐end run-through of the whole system
+
+Block-Box Testing
+special values like 0 for numbers and blank for strings. They may also
+include the largest and smallest possible values. For strings that might mean a string that’s all blanks
+or all ∼ characters.
+Sometimes, you can trip up a method that expects to process names by using strings containing
+numbers or special characters such as &#%!$
