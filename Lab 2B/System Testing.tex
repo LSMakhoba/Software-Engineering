@@ -27,7 +27,10 @@ Version 1.0\\
  \section{Purpose}
 Ensuring that a system's faults have been eradicated is of most importance and this document describes how we have gone about the process of inspecting the PrimeNumbers function.
 \section{Test Program Description}
-The test program has been designed to detect and elliminate all possible bugs in the system. This has been achieved by listing all possible input variable types,both valid and invalid tests were conducted using exhaustive input testing tyes. Appropriate Error codes are returned for invalid input. Results of these tests were tabulated as comparisons were made with the expected results and simualtion results were recorded.
+The test program has been designed to detect and elliminate all possible bugs in the system. This has been achieved by listing all possible input variable types,both valid and invalid tests were conducted using exhaustive input testing tyes. Appropriate Error codes are returned for invalid input. Results of these tests were tabulated as comparisons were made with the expected results and simualtion results were recorded.\\
+
+
+
 \subsection{Modification to parameters passed}
 \begin{itemize}
 \item
@@ -53,6 +56,8 @@ Numbers that can be stored as long
 \subsection{Unit Tesing}
 Testing of individual components using white-box method to evaluate all units of code in the program.\\
 \newpage
+
+Floor of testing events
 \begin{figure}[h]
     \centering
     
@@ -82,14 +87,13 @@ One approach used invloved using data break points to view the values of variabl
 The internal structure of PrimeNumber()
 
 \subsection{Integration Tesing}
-Ensure entire program software functions as intended and to specifications. Emphasis is put on testing activities that exam reproducabality and the level of automation accros the spetrum.
- \begin{figure}[h]
-    \centering
-    
-    \includegraphics[width=\linewidth]{Integration Testing.png}
-    \end{figure}
+Integration testing is a kind of testing that is done by integrating all the methods and checking their interaction, for example observing that one methods output is read accordingly as the input of the relavant methods.\\
+In our program, we have defined a function that takes in the input and then validates it to check if it conforms. If the input is valid(Positive integer), it is then passed from the checkInput() model to the PrimeNumber() function. The PrimeNumber() method returns an output.
+We also checked to see that all method calls happened correctly and they passed these tests.\\
+A common issue with intergration testing involves database locking of data which was not a problem we encounterd.
+
 \subsection{System Tesing}
-Testing the overal program.
+Testing the overal program. Checks overall run-through of the system.
 \subsubsection{Black Box (Functional) testing}
 High level design done by independent testers.\\
 
@@ -99,22 +103,6 @@ High level design done by independent testers.\\
     \includegraphics[width=\linewidth]{Black Box Diagram.png}
     \end{figure}
  
-\section{Screnarios tested and results}
-\begin{tabular}{|p{3cm}|p{9cm}|}
-\hline
-\textbf{Instance} & \textbf{Result}\\
-\hline
-User Input -\\ Positive Integer  &  Expected result\\
-\hline
-User Input -\\Negative Integer &  Error Code 101-Negative int. Enter positive int.\\
-\hline
-User Input -\\String of char & Error Code 102-String of character.Enter positive int\\
-\hline
-File Input & A Expected Result\\
-\hline
-
-    
-\end{tabular}
 
  \end{document}
 

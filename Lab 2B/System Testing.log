@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.27)  6 SEP 2018 15:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.13)  10 SEP 2018 06:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **"System Testing.tex"
 (./System Testing.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -150,52 +150,84 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 [1]
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
-LaTeX Warning: File `Integration Testing.png' not found on input line 36.
+ []
 
-<Integration Testing.png, id=13, 500.87125pt x 470.75874pt>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+[2]
+
+LaTeX Warning: File `Integration Testing.png' not found on input line 64.
+
+<Integration Testing.png, id=17, 500.87125pt x 470.75874pt>
 File: Integration Testing.png Graphic file (type png)
 
 <use Integration Testing.png>
-Package pdftex.def Info: Integration Testing.png used on input line 36.
+Package pdftex.def Info: Integration Testing.png used on input line 64.
 (pdftex.def)             Requested size: 360.0pt x 338.37138pt.
- [2 <./Integration Testing.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
+Underfull \hbox (badness 5288) in paragraph at lines 76--76
+[]\OT1/cmr/m/n/10.95 Negative In-te-ger and
  []
 
 
-LaTeX Warning: File `Black Box Diagram.png' not found on input line 46.
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\OT1/cmr/m/n/10.95 Er-ror Code 101-
+ []
 
-<Black Box Diagram.png, id=19, 809.0225pt x 455.7025pt>
-File: Black Box Diagram.png Graphic file (type png)
 
-<use Black Box Diagram.png>
-Package pdftex.def Info: Black Box Diagram.png used on input line 46.
-(pdftex.def)             Requested size: 360.0pt x 202.7835pt.
+Underfull \hbox (badness 2326) in paragraph at lines 76--76
+\OT1/cmr/m/n/10.95 Negative int. En-ter
+ []
 
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 50--65
+
+Overfull \hbox (86.33856pt too wide) in paragraph at lines 70--82
 [] 
  []
 
-[3 <./Black Box Diagram.png>] (./System Testing.aux) ) 
+[3 <./Integration Testing.png>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+LaTeX Warning: File `Black Box Diagram.png' not found on input line 103.
+
+<Black Box Diagram.png, id=26, 809.0225pt x 455.7025pt>
+File: Black Box Diagram.png Graphic file (type png)
+
+<use Black Box Diagram.png>
+Package pdftex.def Info: Black Box Diagram.png used on input line 103.
+(pdftex.def)             Requested size: 360.0pt x 202.7835pt.
+ [5 <./Black Box Diagram.png>] (./System Testing.aux) ) 
 Here is how much of TeX's memory you used:
- 1533 strings out of 493029
- 22130 string characters out of 6136234
- 80825 words of memory out of 5000000
- 5072 multiletter control sequences out of 15000+600000
+ 1550 strings out of 494910
+ 22425 string characters out of 6179835
+ 78135 words of memory out of 5000000
+ 4842 multiletter control sequences out of 15000+600000
  8503 words of font info for 30 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 37i,8n,23p,242b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb>
-Output written on "System Testing.pdf" (4 pages, 130078 bytes).
+ 36 hyphenation exceptions out of 8191
+ 37i,8n,23p,449b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb>
+Output written on "System Testing.pdf" (6 pages, 143396 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
