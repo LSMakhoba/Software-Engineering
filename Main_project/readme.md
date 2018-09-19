@@ -1,2 +1,2 @@
-#creating folder for the main project
-# this is the folder we will be working in
+# Creating folder for the main project
+ This is the folder we will be working in for our main project.
