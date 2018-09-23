@@ -95,11 +95,11 @@ public class Doctor extends javax.swing.JFrame {
     
     public static void create_doctor()
     {
-        name = "Peacemaker";
-        surname = "Ngcobo";
-        specialization = "not sure";
-        email = "peace@gmail.com";
-        password = "peacemaker123";
+        name = "Anderson";
+        surname = "Keen";
+        specialization = "teeth removal";
+        email = "anderson@gmail.com";
+        password = "keenanderson";
         
         PreparedStatement ps;
         String query_statement = "INSERT INTO `DOCTOR`(`NAME`, `SURNAME`, `EMAIL`, `SPECIALIZATION`, `PASSWORD`) VALUES (?,?,?,?,?)";
@@ -118,7 +118,7 @@ public class Doctor extends javax.swing.JFrame {
             }
         }catch(SQLException sq)
         {
-              sq.getSQLState();
+              System.out.println("error");
         }
     
     }

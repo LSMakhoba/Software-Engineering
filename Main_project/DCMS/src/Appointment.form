@@ -2,16 +2,6 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="com.mindfusion.scheduling.model.Contact" name="contact1">
-    </Component>
-    <Component class="com.mindfusion.scheduling.model.Appointment" name="appointment1">
-    </Component>
-    <Component class="com.mindfusion.common.Duration" name="duration1">
-    </Component>
-    <Component class="com.mindfusion.scheduling.DayOfWeekStyle" name="dayOfWeekStyle1">
-    </Component>
-    <Component class="com.mindfusion.scheduling.model.Reminder" name="reminder1">
-    </Component>
     <Container class="javax.swing.JFrame" name="jFrame1">
 
       <Layout>

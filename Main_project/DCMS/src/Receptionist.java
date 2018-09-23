@@ -1,5 +1,6 @@
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -15,6 +16,13 @@ import javax.swing.JOptionPane;
  */
 public class Receptionist extends javax.swing.JFrame {
 
+    private int recept_id;
+    private String name;
+    private String surname;
+    private String email;
+    private String password;
+    private String retyped_pass;
+    
     /**
      * Creates new form Receptionist
      */
@@ -22,6 +30,7 @@ public class Receptionist extends javax.swing.JFrame {
         initComponents();
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,38 +40,258 @@ public class Receptionist extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        user_id = new javax.swing.JTextField();
+        firstname = new javax.swing.JTextField();
+        lastname = new javax.swing.JTextField();
+        recept_email = new javax.swing.JTextField();
+        warning = new javax.swing.JLabel();
+        recept_register = new javax.swing.JButton();
+        recept_password = new javax.swing.JPasswordField();
+        retypedpassword = new javax.swing.JPasswordField();
+        btn_cancel = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(115, 101, 152));
+        jPanel1.setForeground(null);
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.white);
+        jLabel1.setText("UserID:");
+
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel2.setForeground(java.awt.Color.white);
+        jLabel2.setText("Firstname:");
+
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel3.setForeground(java.awt.Color.white);
+        jLabel3.setText("Lastname:");
+
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel4.setForeground(java.awt.Color.white);
+        jLabel4.setText("Email:");
+
+        jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel5.setForeground(java.awt.Color.white);
+        jLabel5.setText("Password:");
+
+        jLabel6.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel6.setForeground(java.awt.Color.white);
+        jLabel6.setText("RetypedPassword:");
+
+        warning.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        warning.setForeground(java.awt.Color.red);
+        warning.setText("|");
+
+        recept_register.setBackground(java.awt.Color.blue);
+        recept_register.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        recept_register.setForeground(java.awt.Color.white);
+        recept_register.setText("Register");
+        recept_register.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recept_registerActionPerformed(evt);
+            }
+        });
+
+        btn_cancel.setBackground(java.awt.Color.red);
+        btn_cancel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        btn_cancel.setForeground(java.awt.Color.white);
+        btn_cancel.setText("Cancel");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btn_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(recept_register, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(warning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(user_id)
+                        .addComponent(firstname)
+                        .addComponent(lastname)
+                        .addComponent(recept_email)
+                        .addComponent(recept_password)
+                        .addComponent(retypedpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(273, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(warning)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(user_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel2))
+                            .addComponent(firstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addComponent(lastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4)
+                    .addComponent(recept_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(recept_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(retypedpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(recept_register)
+                    .addComponent(btn_cancel))
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(787, 458));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void recept_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recept_registerActionPerformed
+       
+            name = firstname.getText();
+            surname = lastname.getText();
+            email = recept_email.getText();
+            password = String.valueOf(recept_password.getPassword());
+            retyped_pass = String.valueOf(retypedpassword.getPassword());
+            
+        
+        
+        if(user_id.getText().length() == 0)
+        {
+            warning.setText("insert your user_id");
+            return;
+        }
+        
+        recept_id = Integer.parseInt(user_id.getText());
+        
+        if(name.equals(""))
+        {
+            warning.setText("insert name");
+            return;
+        }
+        
+        if(surname.equals(""))
+        {
+            warning.setText("insert your lastname");
+            return;
+        }
+        
+        if(email.equals(""))
+        {
+            warning.setText("insert your email address");
+            return;
+        }
+        
+        if(password.equals(""))
+        {
+            warning.setText("insert password");
+            return;
+        }
+        
+        if(retyped_pass.equals(""))
+        {
+            warning.setText("retype password");
+            return;
+        }
+        
+        if(!password.equals(retyped_pass))
+        {
+            warning.setText("password does not match");
+        }
+        else if(check_email())
+        {
+            JOptionPane.showMessageDialog(null, "Email already exist");
+            
+        }
+        else
+        {
+            create_receptionist();
+        }
+    }//GEN-LAST:event_recept_registerActionPerformed
+
+     public boolean check_email()
+     {
+         PreparedStatement ps;
+         ResultSet rs;
+         boolean email_exist = false;
+         
+         String check_email = "select* from RECEPTIONIST where EMAIL=?";
+         try
+         {
+             ps = Connect2database.getConnection().prepareStatement(check_email);
+             
+             ps.setString(1, email);
+             rs = ps.executeQuery();
+             
+             if(rs.next())
+             {
+                 email_exist = true;
+             }
+         }
+         catch(SQLException sq)
+         {
+             sq.getSQLState();
+         }
+         
+         
+         return email_exist;
+     }
+    
+    
     /**
      * @param args the command line arguments
      */
     
     
-    private static String name;
-    private static String surname;
-    private static String email;
-    private static String password;
-    private static int recept_id;
-    
-    
     public static void main(String args[]) {
         
         
-        create_receptionist();
+        //create_receptionist();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -95,32 +324,34 @@ public class Receptionist extends javax.swing.JFrame {
     }
     
     
-    public static void create_receptionist()
+    
+    void create_receptionist()
     {
-        name = "Zanele";
-        surname = "Mathe";
-        email = "zanale@gmail.com";
-        password = "Mathen1@23";
-        recept_id = 1;
+        /*name = "Amanda";
+        surname = "Clock";
+        email = "amanad@gmail.com";
+        password = "clockamanda3";
+        recept_id = 1432;*/
         
         PreparedStatement ps;
-        String query_statement = "INSERT INTO `RECEPTIONIST`(`RECEPTIONIST_ID`,`NAME`, `SURNAME`, `PASSWORD`,`EMAIL`) VALUES (?,?,?,?,?)";
+        String query_statement = "INSERT INTO `RECEPTIONIST`(`RECEPTIONIST_ID`,"
+                + "`NAME`, `SURNAME`, `EMAIL`,`PASSWORD`)"
+                + " VALUES (?,?,?,?,?)";
     
         try{
             ps = Connect2database.getConnection().prepareStatement(query_statement);
             
-            ps.setInt(1, 1);
+            ps.setInt(1, recept_id);
             ps.setString(2, name);
             ps.setString(3, surname);
-            ps.setString(4, password);
-            ps.setString(5, email);
-            
+            ps.setString(4, email);
+            ps.setString(5, password);
             
             if(ps.executeUpdate()>0)
-            {
-                
+            {    
                 JOptionPane.showMessageDialog(null, "data captured successfully");
             }
+            
         }catch(SQLException sq)
         {
             sq.getSQLState();
@@ -130,5 +361,21 @@ public class Receptionist extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cancel;
+    private javax.swing.JTextField firstname;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField lastname;
+    private javax.swing.JTextField recept_email;
+    private javax.swing.JPasswordField recept_password;
+    private javax.swing.JButton recept_register;
+    private javax.swing.JPasswordField retypedpassword;
+    private javax.swing.JTextField user_id;
+    private javax.swing.JLabel warning;
     // End of variables declaration//GEN-END:variables
 }

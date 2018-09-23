@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import javax.swing.JOptionPane;
 
 /*
@@ -38,11 +38,6 @@ public class Appointment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        contact1 = new com.mindfusion.scheduling.model.Contact();
-        appointment1 = new com.mindfusion.scheduling.model.Appointment();
-        duration1 = new com.mindfusion.common.Duration();
-        dayOfWeekStyle1 = new com.mindfusion.scheduling.DayOfWeekStyle();
-        reminder1 = new com.mindfusion.scheduling.model.Reminder();
         jFrame1 = new javax.swing.JFrame();
         jDialog1 = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
@@ -470,17 +465,17 @@ public class Appointment extends javax.swing.JFrame {
             }
             else if(user.getSelectedItem() == "Doctor")
             {
-                ps.setInt(5, fetch_receptionist_id());
+                ps.setInt(4, fetch_doctor_id());
             }
             else if(user.getSelectedItem() == "Receptionist")
             {
-                ps.setInt(6, fetch_doctor_id());
+                ps.setInt(4, fetch_receptionist_id());
             }
             else
             {
                 JOptionPane.showMessageDialog(null, "select user");
             }
-            System.out.println("waiting......");
+            
             if(ps.executeUpdate()>0)
             {
                 JOptionPane.showMessageDialog(null, "appointment was successfully");
@@ -497,7 +492,7 @@ public class Appointment extends javax.swing.JFrame {
     //fetch doctor id from Doctor table
     public int fetch_doctor_id()
     {
-        String fetch = "SELECT DOCTOR_ID FROM `DOCTOR` WHERE EMAIL =\"peace@gmail.com\"";
+        String fetch = "SELECT DOCTOR_ID FROM `DOCTOR` WHERE EMAIL =\"anderson@gmail.com\"";
 
         return return_id(fetch);
     }
@@ -515,7 +510,7 @@ public class Appointment extends javax.swing.JFrame {
     //fetching receptionist id to receptionist table
     public int fetch_receptionist_id()
     {
-        String fetch = "SELECT RECEPTIONIST_ID FROM `RECEPTIONIST` WHERE EMAIL =\"zanale@gmail.com\"";
+        String fetch = "SELECT RECEPTIONIST_ID FROM `RECEPTIONIST` WHERE EMAIL =\"jenny@gmail.com\"";
       
         return return_id(fetch);
     }
@@ -597,7 +592,6 @@ public class Appointment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.mindfusion.scheduling.model.Appointment appointment1;
     private javax.swing.JButton book;
     private javax.swing.JButton btn_10;
     private javax.swing.JButton btn_11;
@@ -614,9 +608,6 @@ public class Appointment extends javax.swing.JFrame {
     private javax.swing.JButton btn_8;
     private javax.swing.JButton btn_9;
     private com.toedter.calendar.JDateChooser choosen_date;
-    private com.mindfusion.scheduling.model.Contact contact1;
-    private com.mindfusion.scheduling.DayOfWeekStyle dayOfWeekStyle1;
-    private com.mindfusion.common.Duration duration1;
     private javax.swing.JComboBox<String> hr_from;
     private javax.swing.JComboBox<String> hr_to;
     private javax.swing.JButton jButton10;
@@ -626,7 +617,6 @@ public class Appointment extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private com.mindfusion.scheduling.model.Reminder reminder1;
     private javax.swing.JLabel show_dat;
     private javax.swing.JComboBox<String> user;
     // End of variables declaration//GEN-END:variables
