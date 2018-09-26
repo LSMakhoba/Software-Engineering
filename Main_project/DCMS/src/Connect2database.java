@@ -17,10 +17,13 @@ public class Connect2database
       public static Connection getConnection()
       {
           Connection connection = null;
+          String connectionUrl = "jdbc:mysql://localhost/testDB?characterEncoding=UTF-8&useSSL=false";
+          String dbUser = "root";
+          String username = "Tholithemba";
           
           try{
               Class.forName("com.mysql.cj.jdbc.Driver");
-              connection = DriverManager.getConnection("jdbc:mysql://localhost/testDB?characterEncoding=UTF-8&useSSL=false", "root", "Tholithemba");
+              connection = DriverManager.getConnection(connectionUrl, dbUser, username);
           }catch(Exception e)
           {
               System.out.println(e.getMessage());
