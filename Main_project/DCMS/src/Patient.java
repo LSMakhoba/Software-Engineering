@@ -1,5 +1,6 @@
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -15,6 +16,26 @@ import javax.swing.JOptionPane;
  */
 public class Patient extends javax.swing.JFrame {
 
+        private String name;
+        private String Surname;
+        private String dob;
+        private String id_no;
+        private String gender;
+        private String mob_number;
+        private String email;
+        private String occupation;
+        private String pasword;
+        private String retyped;
+        
+        private String line_1;
+        private String line_2 ;
+        private String line_3;
+        private int postal_code;
+        private String city ;
+        private String province;
+    
+    
+    
     /**
      * Creates new form Patient
      */
@@ -31,21 +52,549 @@ public class Patient extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        patient_firstname = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        patient_lastname = new javax.swing.JTextField();
+        patient_dob = new javax.swing.JFormattedTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        patient_id_pas_no = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        patient_cell = new javax.swing.JTextField();
+        patient_address1 = new javax.swing.JTextField();
+        patient_address2 = new javax.swing.JTextField();
+        patient_city = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        patient_postalcode = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        patient_gender = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        comb_province = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+        txtfemail_patient = new javax.swing.JTextField();
+        txtoccupation_patient = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        txtfpassword_patient = new javax.swing.JPasswordField();
+        retyppassword_patient = new javax.swing.JPasswordField();
+        patient_address3 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        lblmissing_column = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel4.setBackground(new java.awt.Color(115, 101, 152));
+
+        patient_firstname.setName("patient_firstname"); // NOI18N
+        patient_firstname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_firstnameActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel5.setForeground(java.awt.Color.white);
+        jLabel5.setText("Firstname");
+
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel2.setForeground(java.awt.Color.white);
+        jLabel2.setText("Lastname");
+
+        patient_lastname.setName("patient_lastname"); // NOI18N
+
+        patient_dob.setText("DD/MM/YYYY");
+        patient_dob.setToolTipText("DD/MM/YYYY");
+        patient_dob.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_dobActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel6.setForeground(java.awt.Color.white);
+        jLabel6.setText("Date of Birth");
+
+        jLabel7.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel7.setForeground(java.awt.Color.white);
+        jLabel7.setText("ID/Passport No.");
+
+        patient_id_pas_no.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_id_pas_noActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel8.setForeground(java.awt.Color.white);
+        jLabel8.setText("Mobile Number");
+
+        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel9.setForeground(java.awt.Color.white);
+        jLabel9.setText("Address");
+
+        patient_cell.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        patient_cell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_cellActionPerformed(evt);
+            }
+        });
+
+        patient_address1.setText("Address line 1");
+        patient_address1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_address1ActionPerformed(evt);
+            }
+        });
+
+        patient_address2.setText("Address line 2");
+        patient_address2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_address2ActionPerformed(evt);
+            }
+        });
+
+        patient_city.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_cityActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel10.setForeground(java.awt.Color.white);
+        jLabel10.setText("Postal Code");
+
+        patient_postalcode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patient_postalcodeActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel11.setForeground(java.awt.Color.white);
+        jLabel11.setText("Province");
+
+        jButton1.setBackground(java.awt.Color.blue);
+        jButton1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jButton1.setForeground(java.awt.Color.white);
+        jButton1.setText("Next");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.white);
+        jLabel1.setText("Gender");
+
+        patient_gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Gender", "Male", "Female" }));
+
+        jLabel12.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel12.setForeground(java.awt.Color.white);
+        jLabel12.setText("City");
+
+        comb_province.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Province", "Eastern Cape", "Free State", "Gauteng", "KwaZulu-Natal", "Limpopo", "Mpumalanga", "Northern Cape", "North West", "Western Cape" }));
+
+        jButton2.setBackground(java.awt.Color.red);
+        jButton2.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jButton2.setForeground(java.awt.Color.white);
+        jButton2.setText("Cancel");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel13.setForeground(java.awt.Color.white);
+        jLabel13.setText("Password");
+
+        jLabel14.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel14.setForeground(java.awt.Color.white);
+        jLabel14.setText("Email");
+
+        jLabel15.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel15.setForeground(java.awt.Color.white);
+        jLabel15.setText("Occupation");
+
+        patient_address3.setText("Address line 3");
+
+        jLabel16.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel16.setForeground(java.awt.Color.white);
+        jLabel16.setText("Retype Password");
+
+        lblmissing_column.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        lblmissing_column.setForeground(java.awt.Color.red);
+        lblmissing_column.setText(".");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtoccupation_patient)
+                    .addComponent(retyppassword_patient)
+                    .addComponent(txtfemail_patient)
+                    .addComponent(patient_cell)
+                    .addComponent(patient_id_pas_no)
+                    .addComponent(patient_dob)
+                    .addComponent(patient_lastname)
+                    .addComponent(patient_firstname)
+                    .addComponent(patient_gender, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtfpassword_patient, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(40, 40, 40)))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(patient_address1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(patient_address2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(patient_address3, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(patient_city)
+                        .addComponent(patient_postalcode)
+                        .addComponent(comb_province, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(67, 67, 67))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(222, 222, 222))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblmissing_column, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(272, 272, 272))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblmissing_column)
+                .addGap(8, 8, 8)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel6)
+                                .addGap(5, 5, 5))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(patient_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(patient_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(patient_dob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel7)
+                                .addGap(17, 17, 17)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
+                                .addComponent(patient_id_pas_no, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(patient_gender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(patient_cell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(patient_address1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(patient_address2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(patient_address3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(patient_city, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(patient_postalcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(comb_province, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtfemail_patient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addComponent(txtfpassword_patient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(retyppassword_patient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtoccupation_patient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addGap(72, 72, 72)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(25, 25, 112));
+
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        jLabel3.setForeground(java.awt.Color.white);
+        jLabel3.setText("New Patient");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(317, 317, 317))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(154, 154, 154))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(983, 670));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+         name = patient_firstname.getText();
+         Surname = patient_lastname.getText();
+         dob = patient_dob.getText();
+         id_no = patient_id_pas_no.getText();
+         gender = String.valueOf(patient_gender.getSelectedItem());
+         mob_number = patient_cell.getText();
+         email = txtfemail_patient.getText();
+         occupation= txtoccupation_patient.getText();
+         pasword = String.valueOf(txtfpassword_patient.getPassword());
+         retyped = String.valueOf(retyppassword_patient.getPassword());
+         
+         line_1 = patient_address1.getText();
+         line_2 = patient_address2.getText();
+         line_3 = patient_address3.getText();
+         city =  patient_city.getText();
+         province = String.valueOf(comb_province.getSelectedItem());         
+         
+         if(name.equals(""))
+         {
+             lblmissing_column.setText("enter  firstname");
+             return;
+         }
+         
+         if(Surname.equals(""))
+         {
+             lblmissing_column.setText("enter lastname");
+             return;
+         }
+
+         if(dob.equals(""))
+         {
+             lblmissing_column.setText("enter date of birth");
+             return;
+         }
+
+         if(id_no.equals(""))
+         {
+             lblmissing_column.setText("enter ID number");
+             return;
+         }
+
+         if(mob_number.equals(""))
+         {
+             lblmissing_column.setText("enter mobile number");
+             return;
+         }
+
+         if(email.equals(""))
+         {
+             lblmissing_column.setText("enter email");
+             return;
+         }
+
+         if(occupation.equals(""))
+         {
+             lblmissing_column.setText("enter occupation");
+             return;
+         }  
+         
+         if(patient_gender.getSelectedIndex()==0)
+         {
+             lblmissing_column.setText("please select gender");
+             return;
+         }
+         
+         if(line_1.equals(""))
+         {
+             lblmissing_column.setText("please enter address line 1");
+             return;
+         }
+
+         if(line_2.equals(""))
+         {
+             lblmissing_column.setText("please enter address line 2");
+             return;
+         }
+
+         if(line_3.equals(""))
+         {
+             lblmissing_column.setText("please enter address line 3");
+             return;
+         }
+
+         if(city.equals(""))
+         {
+             lblmissing_column.setText("please enter City");
+             return;
+         }
+
+         if(patient_postalcode.getText().length() == 0)
+         {
+             lblmissing_column.setText("please enter postal code");
+             return;
+         }
+          
+         postal_code = Integer.parseInt(patient_postalcode.getText());
+          
+         if(comb_province.getSelectedIndex()==0)
+         {
+             lblmissing_column.setText("please select gender");
+             return;
+         } 
+         
+         if(!pasword.equals(retyped))
+         {
+             lblmissing_column.setText("password does not match");
+         }
+         else if(check_email())
+         {
+             lblmissing_column.setText("ID number or email already exist");
+         }
+         else
+         {
+                create_patient();
+                new Medical_condition().setVisible(true);
+                this.setVisible(false); 
+         }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void patient_postalcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_postalcodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_postalcodeActionPerformed
+
+    private void patient_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_cityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_cityActionPerformed
+
+    private void patient_address2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_address2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_address2ActionPerformed
+
+    private void patient_address1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_address1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_address1ActionPerformed
+
+    private void patient_cellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_cellActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_cellActionPerformed
+
+    private void patient_id_pas_noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_id_pas_noActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_id_pas_noActionPerformed
+
+    private void patient_dobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_dobActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_dobActionPerformed
+
+    private void patient_firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patient_firstnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patient_firstnameActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,43 +630,34 @@ public class Patient extends javax.swing.JFrame {
             }
         });
         
-        create_patient();
+       
     }
     
     //inserting data into patint table
-    public static void create_patient()
+    public void create_patient()
     {
-        int patient_id = 1515;
-        String name = "Sandile";
-        String Surname = "Khendle";
-        String date_of_birth = "30-Dec-1983";
-        String id_no = "8312304389081";
-        String gender = "Male";
-        String mob_number = "0667443410";
-        String email = "sandile@gmail.com";
-        String occupation=" Tax driver";
         
         create_address();
         
         PreparedStatement ps;
         
-        String add_data = "INSERT INTO `PATIENT`(`PATIENT_ID`,`NAME`, `SURNAME`, `DOB`, `ID_OR_PASSORT_NUMBER`, `GENDER`,"
-                + " `MOBILE_NUMBER`, `EMAIL`, `OCCUPATION`, `ADDRESS_ID`, `MED_CONDITION_ID`) VALUES"
+        String add_data = "INSERT INTO `PATIENT`(`NAME`, `SURNAME`, `DOB`, `ID_OR_PASSORT_NUMBER`, `GENDER`,"
+                + " `MOBILE_NUMBER`, `EMAIL`,`PASSWORD`, `OCCUPATION`, `ADDRESS_ID`, `MED_CONDITION_ID`) VALUES"
                 + " (?,?,?,?,?,?,?,?,?,?,?)";
         try
         {
             ps = Connect2database.getConnection().prepareStatement(add_data);
-            
-            ps.setInt(1, patient_id);
-            ps.setString(2, name);
-            ps.setString(3, Surname);
-            ps.setString(4, date_of_birth);
-            ps.setString(5, id_no);
-            ps.setString(6, gender);
-            ps.setString(7, mob_number);
-            ps.setString(8, email);
+
+            ps.setString(1, name);
+            ps.setString(2, Surname);
+            ps.setString(3, dob);
+            ps.setString(4, id_no);
+            ps.setString(5, gender);
+            ps.setString(6, mob_number);
+            ps.setString(7, email);
+            ps.setString(8, pasword);
             ps.setString(9, occupation);
-            ps.setInt(10, 2);
+            ps.setInt(10, 4);
             ps.setInt(11, 10);
             
             if(ps.executeUpdate()>0)
@@ -134,14 +674,11 @@ public class Patient extends javax.swing.JFrame {
     }
     //end of create_patient
     //inserting data to address table
-    public static void create_address()
+    public void create_address()
     {
-       String line_1 = "74 Main reef";
-       String line_2 = "Soweto";
-       String line_3 = "Jabulani";
-       String city = "Johannesburg";
-       String province = "Gauteng";
-       int postal_code = 1723;
+       
+       System.out.println(province);
+       
        
        PreparedStatement ps;
        
@@ -172,7 +709,77 @@ public class Patient extends javax.swing.JFrame {
          
     }
     //end of create_address
+    
+    
+     public boolean check_email()
+     {
+         PreparedStatement ps;
+         ResultSet rs;
+         boolean exist = false;
+         
+         String check = "select* from PATIENT where ID_OR_PASSORT_NUMBER=? or EMAIL=?";
+         try
+         {
+             ps = Connect2database.getConnection().prepareStatement(check);
+             
+             ps.setString(1, id_no);
+             ps.setString(2, email);
+             
+             rs = ps.executeQuery();
+             
+             if(rs.next())
+             {
+                 exist = true;
+             }
+         }
+         catch(SQLException sq)
+         {
+             sq.getSQLState();
+         }
+         
+         
+         return exist;
+     }
+    //end of check_email function
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> comb_province;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblmissing_column;
+    private javax.swing.JTextField patient_address1;
+    private javax.swing.JTextField patient_address2;
+    private javax.swing.JTextField patient_address3;
+    private javax.swing.JTextField patient_cell;
+    private javax.swing.JTextField patient_city;
+    private javax.swing.JFormattedTextField patient_dob;
+    private javax.swing.JTextField patient_firstname;
+    private javax.swing.JComboBox<String> patient_gender;
+    private javax.swing.JTextField patient_id_pas_no;
+    private javax.swing.JTextField patient_lastname;
+    private javax.swing.JTextField patient_postalcode;
+    private javax.swing.JPasswordField retyppassword_patient;
+    private javax.swing.JTextField txtfemail_patient;
+    private javax.swing.JPasswordField txtfpassword_patient;
+    private javax.swing.JTextField txtoccupation_patient;
     // End of variables declaration//GEN-END:variables
 }

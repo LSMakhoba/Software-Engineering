@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,8 +16,11 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
-    private int login_userid;
     private String login_password;
+    private String user_practice_number;
+    private String name;
+    private String lastname;
+    private String fullname;
     
     /**
      * Creates new form Login
@@ -44,6 +46,7 @@ public class Login extends javax.swing.JFrame {
         txtf_login_password = new javax.swing.JPasswordField();
         warn_message = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        comb_usrtype = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,7 +65,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("UserID:");
+        jLabel1.setText("Username:");
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setForeground(java.awt.Color.white);
@@ -80,6 +83,8 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        comb_usrtype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "usertype", "Doctor", "Patient", "Receptionist" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -94,18 +99,21 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(comb_usrtype, 0, 184, Short.MAX_VALUE)
                             .addComponent(warn_message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtf_user_id, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
                             .addComponent(txtf_login_password)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
                                 .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addContainerGap()
+                .addComponent(comb_usrtype, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(warn_message)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -139,64 +147,121 @@ public class Login extends javax.swing.JFrame {
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
 
-            //atleast one charactor must be entered for both password and 
-            // user id
-            if(txtf_user_id.getText().length() == 0)
-             {
-                 warn_message.setText("please enter your user id");
-                 return;
-             }
+         login_password = String.valueOf(txtf_login_password.getPassword());
+         user_practice_number = txtf_user_id.getText();
+        
+        //atleast one charactor must be entered for both password and 
+        // user id
+        if(user_practice_number.equals(""))
+         {
+             warn_message.setText("please enter your user email");
+             return;
+         }
 
-             login_userid = Integer.parseInt(txtf_user_id.getText());
-             login_password = String.valueOf(txtf_login_password.getPassword());
 
-             if(login_password.equals(""))
-             {
-                 warn_message.setText("please enter your password");           
-                 return;
-             }
+         if(login_password.equals(""))
+         {
+             warn_message.setText("please enter your password");           
+             return;
+         }
+
              
-             
-             
-       //execute only if the input from th user
-       //exist in database
-        if(validate_userid_password())
+         
+         
+         
+        if(comb_usrtype.getSelectedItem() == "usertype")
         {
-            warn_message.setText("login was successfully");
-            warn_message.setForeground(Color.green);
-            
+            warn_message.setText("please select usertype"); 
+            return;
         }
-        else
+        else if(comb_usrtype.getSelectedItem() == "Doctor")
         {
-                txtf_user_id.setText("");
-                txtf_login_password.setText("");
-            warn_message.setText("incorrect userid or password");
-        } 
-
+                //execute only if the input from th user
+                //exist in database
+                 if(validate_usertype("Doctor") && usertype_fullname("Doctor"))
+                 {
+                    fullname = name+" "+lastname; 
+                    new DoctorHome(fullname).setVisible(true);
+                    this.setVisible(false);
+                 }
+                 else
+                 {
+                    login_error_message();
+                 } 
+        }
+        else if(comb_usrtype.getSelectedItem() == "Patient")
+        {
+                //execute only if the input from th user
+                //exist in database
+                 if(validate_usertype("Patient") && usertype_fullname("Patient"))
+                 {
+                    fullname = name+" "+lastname;
+                    new PatientHomeScreen(fullname).setVisible(true);
+                    this.setVisible(false);
+                 }
+                 else
+                 {
+                    login_error_message();
+                 }
+        }
+        else if(comb_usrtype.getSelectedItem() == "Receptionist")
+        {
+            //execute only if the input from th user
+            //exist in database
+             if(validate_usertype("Receptionist") && usertype_fullname("Receptionist"))
+             {               
+                fullname = name+" "+lastname;
+                new ReceptionistHome(fullname).setVisible(true);
+                this.setVisible(false);
+             }
+             else
+             {
+                login_error_message();
+             }    
+        }
+       
         
     }//GEN-LAST:event_btn_loginActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         
-        Receptionist receptionist = new Receptionist();
-        receptionist.setVisible(true);
-        this.setVisible(false);
+       
+       if(comb_usrtype.getSelectedItem() == "usertype")
+        {
+            warn_message.setText("please select usertype"); 
+            return;
+        }
+        else if(comb_usrtype.getSelectedItem() == "Doctor")
+        {
+            new Doctor("").setVisible(true);
+            this.setVisible(false);
+        }
+        else if(comb_usrtype.getSelectedItem() == "Patient")
+        {
+            new Patient().setVisible(true);
+            this.setVisible(false);
+        }
+        else if(comb_usrtype.getSelectedItem() == "Receptionist")
+        {
+            new Receptionist().setVisible(true);
+            this.setVisible(false);
+        }        
     }//GEN-LAST:event_jLabel3MouseClicked
     
     
-    public boolean validate_userid_password()
+    public boolean validate_usertype(String usertype)
     {
         PreparedStatement ps;
         ResultSet rs;
         boolean correctness = false;
         
-        String quiry = "select* from RECEPTIONIST where RECEPTIONIST_ID=? AND PASSWORD=?";
+        String quiry =  choose_statement(usertype);
         
         try
         {
             ps = Connect2database.getConnection().prepareStatement(quiry);
 
-            ps.setInt(1, login_userid);
+            ps.setString(1, user_practice_number);
             ps.setString(2, login_password);
 
             rs = ps.executeQuery();
@@ -220,8 +285,89 @@ public class Login extends javax.swing.JFrame {
         return correctness;
     }
     
+    public String choose_statement(String quiry)
+    {
+        switch (quiry) {
+            case "Patient":
+                quiry = "select* from PATIENT where EMAIL=? AND PASSWORD=?";
+                break;
+            case "Doctor":
+                quiry = "select* from DOCTOR where PRACTICE_NUMBER=? AND PASSWORD=?";
+                break;
+            case "Receptionist":
+                quiry = "select* from RECEPTIONIST where EMAIL=? AND PASSWORD=?";
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "please contact the Administrator");
+                break;
+        }
+        
+        return quiry;
+    }
 
     
+     public boolean usertype_fullname(String user)
+    {
+        PreparedStatement ps;
+        ResultSet rs;
+        boolean correctness = false;
+        
+        String quiry = quiry_statement(user);
+        
+        try
+        {
+            ps = Connect2database.getConnection().prepareStatement(quiry);
+
+            ps.setString(1, user_practice_number);
+
+            rs = ps.executeQuery();
+            
+            if(rs.next())
+            {
+                name = rs.getString("NAME");
+                lastname = rs.getString("SURNAME");
+                correctness = true;
+            }
+        }
+        catch(SQLException sq)
+        {
+            sq.getSQLState();
+        }
+
+        
+        return correctness;
+    }
+     //end receptionionist_name() function
+    
+     
+     
+    public String quiry_statement(String statement)
+    {
+        switch (statement) {
+            case "Doctor":
+                statement = "select NAME, SURNAME from DOCTOR where PRACTICE_NUMBER=?";
+                break;
+            case "Patient":
+                statement = "select NAME, SURNAME from PATIENT where EMAIL=?";
+                break;
+            case "Receptionist":
+                statement = "select NAME, SURNAME from RECEPTIONIST where EMAIL=?";
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Please contact the Administrator");
+                break;
+        }
+        
+        return statement;
+    }
+     
+    //login erro message
+    public void login_error_message()
+    {
+        txtf_user_id.setText("");
+        txtf_login_password.setText("");
+        warn_message.setText("incorrect userid or password");
+    }
     
     /**
      * @param args the command line arguments
@@ -260,6 +406,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_login;
+    private javax.swing.JComboBox<String> comb_usrtype;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

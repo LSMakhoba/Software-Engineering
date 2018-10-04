@@ -42,13 +42,11 @@ public class Receptionist extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        user_id = new javax.swing.JTextField();
         firstname = new javax.swing.JTextField();
         lastname = new javax.swing.JTextField();
         recept_email = new javax.swing.JTextField();
@@ -58,14 +56,11 @@ public class Receptionist extends javax.swing.JFrame {
         retypedpassword = new javax.swing.JPasswordField();
         btn_cancel = new javax.swing.JButton();
         goto_login = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(115, 101, 152));
-
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("UserID:");
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel2.setForeground(java.awt.Color.white);
@@ -119,54 +114,65 @@ public class Receptionist extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
+        jLabel7.setForeground(java.awt.Color.white);
+        jLabel7.setText("HOME");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(119, 119, 119)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(warning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(user_id)
-                        .addComponent(firstname)
-                        .addComponent(lastname)
-                        .addComponent(recept_email)
-                        .addComponent(recept_password)
-                        .addComponent(retypedpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(goto_login, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(firstname)
+                                .addComponent(lastname)
+                                .addComponent(recept_email)
+                                .addComponent(recept_password)
+                                .addComponent(retypedpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btn_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(recept_register, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(goto_login, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(btn_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(recept_register, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(269, 269, 269)
+                            .addComponent(warning, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel7))))
                 .addContainerGap(273, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(warning)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
-                                    .addComponent(user_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2))
+                            .addComponent(jLabel2)
                             .addComponent(firstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3))
@@ -192,7 +198,7 @@ public class Receptionist extends javax.swing.JFrame {
                     .addComponent(btn_cancel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(goto_login)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,15 +224,6 @@ public class Receptionist extends javax.swing.JFrame {
             password = String.valueOf(recept_password.getPassword());
             retyped_pass = String.valueOf(retypedpassword.getPassword());
             
-        
-        
-        if(user_id.getText().length() == 0)
-        {
-            warning.setText("insert your user_id");
-            return;
-        }
-        
-        recept_id = Integer.parseInt(user_id.getText());
         
         if(name.equals(""))
         {
@@ -264,7 +261,7 @@ public class Receptionist extends javax.swing.JFrame {
         }
         else if(check_email())
         {
-            warning.setText("Email already exist");
+            warning.setText("Email or id already exist ");
             
         }
         else
@@ -283,6 +280,12 @@ public class Receptionist extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_goto_loginMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        Home home = new Home();
+        home.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel7MouseClicked
       
     //this function checks if the email exist in 
     //recptonist table if so the user will have to login
@@ -291,19 +294,20 @@ public class Receptionist extends javax.swing.JFrame {
      {
          PreparedStatement ps;
          ResultSet rs;
-         boolean email_exist = false;
+         boolean exist = false;
          
-         String check_email = "select* from RECEPTIONIST where EMAIL=?";
+         String check = "select* from RECEPTIONIST where EMAIL=?";
          try
          {
-             ps = Connect2database.getConnection().prepareStatement(check_email);
+             ps = Connect2database.getConnection().prepareStatement(check);
              
              ps.setString(1, email);
+             
              rs = ps.executeQuery();
              
              if(rs.next())
              {
-                 email_exist = true;
+                 exist = true;
              }
          }
          catch(SQLException sq)
@@ -312,7 +316,7 @@ public class Receptionist extends javax.swing.JFrame {
          }
          
          
-         return email_exist;
+         return exist;
      }
     //end of check_email function
     
@@ -363,19 +367,17 @@ public class Receptionist extends javax.swing.JFrame {
     {
 
         PreparedStatement ps;
-        String query_statement = "INSERT INTO `RECEPTIONIST`(`RECEPTIONIST_ID`,"
+        String query_statement = "INSERT INTO `RECEPTIONIST`("
                 + "`NAME`, `SURNAME`, `EMAIL`,`PASSWORD`)"
-                + " VALUES (?,?,?,?,?)";
+                + " VALUES (?,?,?,?)";
     
         try{
             ps = Connect2database.getConnection().prepareStatement(query_statement);
-            
-            ps.setInt(1, recept_id);
-            ps.setString(2, name);
-            ps.setString(3, surname);
-            ps.setString(4, email);
-            ps.setString(5, password);
-            
+
+            ps.setString(1, name);
+            ps.setString(2, surname);
+            ps.setString(3, email);
+            ps.setString(4, password);
             if(ps.executeUpdate()>0)
             {    
                 warning.setForeground(Color.green);
@@ -394,7 +396,6 @@ public class Receptionist extends javax.swing.JFrame {
     //clear input fields after data was captured
     public void clear_cells()
     {
-        user_id.setText("");
         firstname.setText("");
         lastname.setText("");
         recept_email.setText("");
@@ -407,19 +408,18 @@ public class Receptionist extends javax.swing.JFrame {
     private javax.swing.JButton btn_cancel;
     private javax.swing.JTextField firstname;
     private javax.swing.JLabel goto_login;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField lastname;
     private javax.swing.JTextField recept_email;
     private javax.swing.JPasswordField recept_password;
     private javax.swing.JButton recept_register;
     private javax.swing.JPasswordField retypedpassword;
-    private javax.swing.JTextField user_id;
     private javax.swing.JLabel warning;
     // End of variables declaration//GEN-END:variables
 }
