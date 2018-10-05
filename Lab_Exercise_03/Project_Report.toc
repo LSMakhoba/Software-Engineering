@@ -1,0 +1,48 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Purpose}{3}
+\contentsline {subsection}{\numberline {1.2}Problem Statement}{3}
+\contentsline {subsection}{\numberline {1.3}Project Objectives }{4}
+\contentsline {subsection}{\numberline {1.4}Stakeholders}{4}
+\contentsline {subsubsection}{\numberline {1.4.1}Users}{4}
+\contentsline {subsubsection}{\numberline {1.4.2}Developers}{5}
+\contentsline {subsubsection}{\numberline {1.4.3}Project Management}{5}
+\contentsline {subsection}{\numberline {1.5}Scope}{5}
+\contentsline {subsubsection}{\numberline {1.5.1}Software Benefits and Objectives}{5}
+\contentsline {subsection}{\numberline {1.6}Definitions,Acronyms and Abbreviations}{6}
+\contentsline {subsection}{\numberline {1.7}References}{6}
+\contentsline {subsection}{\numberline {1.8}Project Overview}{7}
+\contentsline {subsubsection}{\numberline {1.8.1}Existing System}{7}
+\contentsline {subsubsection}{\numberline {1.8.2}Proposed System}{8}
+\contentsline {section}{\numberline {2}Software Requirements Specifications}{8}
+\contentsline {subsection}{\numberline {2.1}Overall Description}{8}
+\contentsline {subsubsection}{\numberline {2.1.1}Product perspective}{8}
+\contentsline {subsection}{\numberline {2.2}Functionality}{8}
+\contentsline {subsection}{\numberline {2.3}Usability}{8}
+\contentsline {section}{\numberline {3}Project Design and Architecture}{9}
+\contentsline {subsubsection}{\numberline {3.0.1}Architecture}{9}
+\contentsline {subsubsection}{\numberline {3.0.2}Entity Relationship Diagram}{10}
+\contentsline {subsubsection}{\numberline {3.0.3}Software Tools}{10}
+\contentsline {subsubsection}{\numberline {3.0.4}Hardware Requirements}{10}
+\contentsline {subsection}{\numberline {3.1}Product functions}{11}
+\contentsline {subsection}{\numberline {3.2}Business Rules}{12}
+\contentsline {subsubsection}{\numberline {3.2.1}Use Cases}{13}
+\contentsline {subsection}{\numberline {3.3}Fully Dressed Use Cases}{17}
+\contentsline {subsubsection}{\numberline {3.3.1}Create patient use case}{17}
+\contentsline {subsubsection}{\numberline {3.3.2}Create appointment use case}{18}
+\contentsline {subsubsection}{\numberline {3.3.3}Use Case Diagram}{19}
+\contentsline {subsection}{\numberline {3.4}Project Constraints}{19}
+\contentsline {section}{\numberline {4}Agile Approach:SCRUM}{20}
+\contentsline {subsection}{\numberline {4.1}Scrum Roles}{20}
+\contentsline {subsection}{\numberline {4.2}Scrum Artifects}{20}
+\contentsline {subsubsection}{\numberline {4.2.1}User Stories}{20}
+\contentsline {subsubsection}{\numberline {4.2.2}Product Backlog}{22}
+\contentsline {subsubsection}{\numberline {4.2.3}Sprint Backlog}{22}
+\contentsline {subsubsection}{\numberline {4.2.4}Burndown Charts}{22}
+\contentsline {subsection}{\numberline {4.3}Sprint planning documents}{22}
+\contentsline {section}{\numberline {5}Module Descriptions and Demonstrations}{23}
+\contentsline {subsection}{\numberline {5.1}Sceenshots}{23}
+\contentsline {section}{\numberline {6}System development review method}{23}
+\contentsline {subsection}{\numberline {6.1}Sprint retrospective}{23}
+\contentsline {section}{\numberline {7}System Testing}{23}
+\contentsline {subsection}{\numberline {7.1}Unit Tests}{23}
+\contentsline {subsection}{\numberline {7.2}Test Results(Grey Box)}{23}

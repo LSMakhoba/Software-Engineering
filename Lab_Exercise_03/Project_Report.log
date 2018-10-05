@@ -1,0 +1,629 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.28)  5 OCT 2018 03:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Project_Report.tex
+(./Project_Report.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(./Project_Report.aux
+
+LaTeX Warning: Label `fig:ERD' multiply defined.
+
+
+LaTeX Warning: Label `fig:ERD' multiply defined.
+
+)
+\openout1 = `Project_Report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count87
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count88
+\nofMParguments=\count89
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count90
+\MPscratchDim=\dimen106
+\MPnumerator=\count91
+\makeMPintoPDFobject=\count92
+\everyMPtoPDFconversion=\toks16
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Project_Report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+
+[1])
+\tf@toc=\write3
+\openout3 = `Project_Report.toc'.
+
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+[4]
+Overfull \hbox (8.6708pt too wide) in paragraph at lines 63--64
+\OT1/cmr/m/n/10.95 This the link be-tween the prod-uct owner and the de-vel-op-
+ment team. ????????z 
+ []
+
+
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 72--89
+[] 
+ []
+
+[5]
+Overfull \hbox (4.17911pt too wide) in paragraph at lines 95--97
+[]\OT1/cmr/m/n/10.95 https://www.bmc.com/blogs/software-requirements-specificat
+ion-how-
+ []
+
+[6] [7] [8]
+<architecture.png, id=37, 1516.66624pt x 1357.07pt>
+File: architecture.png Graphic file (type png)
+<use architecture.png>
+Package pdftex.def Info: architecture.png  used on input line 182.
+(pdftex.def)             Requested size: 360.0pt x 322.1004pt.
+ [9 <./architecture.png>]
+
+LaTeX Warning: File `Dentist ERD.png' not found on input line 191.
+
+<Dentist ERD.png, id=43, 774.895pt x 549.05125pt>
+File: Dentist ERD.png Graphic file (type png)
+<use Dentist ERD.png>
+Package pdftex.def Info: Dentist ERD.png  used on input line 191.
+(pdftex.def)             Requested size: 360.0pt x 255.07999pt.
+[10 <./Dentist ERD.png>] [11]
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 288--304
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--304
+
+ []
+
+[12]
+Underfull \hbox (badness 3302) in paragraph at lines 311--311
+\OT1/cmr/m/n/10.95 data.This in-cludes when
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 311.
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 311.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 311.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 311.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[]\OT1/cmr/m/n/10.95 Invoked by the Up-
+ []
+
+
+Underfull \hbox (badness 8132) in paragraph at lines 311--312
+\OT1/cmr/m/n/10.95 date Pa-tient use case.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[][]$\OT1/cmr/m/n/10.95 include$[][]$ re-la-tion-
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 313--313
+[]\OT1/cmr/m/n/10.95 The Re-cep-tion-ist or Pa-
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 313.
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 313--314
+\OT1/cmr/m/n/10.95 Read Pa-tient use case.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
+[]\OT1/cmr/bx/n/10.95 Create Ap-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--317
+[]\OT1/cmr/m/n/10.95 The Pa-tient,Receptionist
+ []
+
+
+Underfull \hbox (badness 5175) in paragraph at lines 317--317
+\OT1/cmr/m/n/10.95 or Doc-tor will in-ter-act
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 326.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 326.
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 326--327
+\OT1/cmr/m/n/10.95 Read Ad-min-is-tra-tor use
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+[]\OT1/cmr/bx/n/10.95 Archive Ad-
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 328--328
+\OT1/cmr/m/n/10.95 Ad-min-is-tra-tor to archive
+ []
+
+
+Overfull \hbox (34.43306pt too wide) in paragraph at lines 305--336
+[][]
+ []
+
+
+Overfull \hbox (17.43306pt too wide) in paragraph at lines 305--336
+[] 
+ []
+
+[13] [14]
+Overfull \vbox (16.49973pt too high) has occurred while \output is active []
+
+
+[15]
+Underfull \hbox (badness 6725) in paragraph at lines 339--339
+[]\OT1/cmr/m/n/10.95 The Doc-tor will in-ter-
+ []
+
+
+Underfull \hbox (badness 2735) in paragraph at lines 339--339
+\OT1/cmr/m/n/10.95 act with this use case.
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 339.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
+[]\OT1/cmr/m/n/10.95 The Doc-tor,Patient or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
+\OT1/cmr/m/n/10.95 In-volves view-ing and
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 341.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 343.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 343.
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 343--344
+\OT1/cmr/m/n/10.95 Read Doc-tor use case.
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 345--345
+\OT1/cmr/m/n/10.95 end of em-ploy-ment con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+[]\OT1/cmr/bx/n/10.95 Generate Re-
+ []
+
+
+Overfull \hbox (34.43306pt too wide) in paragraph at lines 337--350
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]\OT1/cmr/bx/n/10.95 Triggering
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
+[]\OT1/cmr/bx/n/10.95 Brief de-scrip-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]\OT1/cmr/bx/n/10.95 Related use
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+[]\OT1/cmr/bx/n/10.95 Stakeholders
+ []
+
+
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 354--375
+[] 
+ []
+
+[16]
+Overfull \vbox (46.37257pt too high) has occurred while \output is active []
+
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
+[]\OT1/cmr/bx/n/10.95 Triggering
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+[]\OT1/cmr/bx/n/10.95 Brief de-scrip-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+[]\OT1/cmr/bx/n/10.95 Related use
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 389--390
+[]\OT1/cmr/m/n/10.95 Read Pa-tient (in-cludes), cre-ate con-sul-ta-tion (ex-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
+[]\OT1/cmr/bx/n/10.95 Stakeholders
+ []
+
+
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 377--398
+[] 
+ []
+
+[18]
+
+LaTeX Warning: File `Use Case Diagram.png' not found on input line 403.
+
+<Use Case Diagram.png, id=75, 675.52374pt x 754.82pt>
+File: Use Case Diagram.png Graphic file (type png)
+<use Use Case Diagram.png>
+Package pdftex.def Info: Use Case Diagram.png  used on input line 403.
+(pdftex.def)             Requested size: 337.76105pt x 377.40909pt.
+
+Overfull \hbox (69.55864pt too wide) in paragraph at lines 403--404
+ [][] 
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+[19 <./Use Case Diagram.png>] [20]
+<PriorityList.png, id=83, 610.28pt x 338.26375pt>
+File: PriorityList.png Graphic file (type png)
+<use PriorityList.png>
+Package pdftex.def Info: PriorityList.png  used on input line 479.
+(pdftex.def)             Requested size: 360.0pt x 199.54807pt.
+ [21] [22 <./PriorityList.png>] [23]
+(./Project_Report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1533 strings out of 492982
+ 22314 string characters out of 6134896
+ 84734 words of memory out of 5000000
+ 5092 multiletter control sequences out of 15000+600000
+ 8503 words of font info for 30 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,10n,25p,690b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Project_Report.pdf (24 pages, 348409 bytes).
+PDF statistics:
+ 118 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
