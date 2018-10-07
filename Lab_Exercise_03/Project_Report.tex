@@ -1,7 +1,9 @@
 \documentclass[11 pt]{article}
 
 \usepackage{graphicx}
-
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{setspace}
 \setstretch{1.25}
 
@@ -179,21 +181,27 @@ DCMS is an automated system that can be accessed via the internet.It has the fol
     \begin{figure}[h]
     \centering
     
-    \includegraphics[width=\linewidth]{architecture.png}
+    \includegraphics[width=1.2\linewidth]{architecture.png}
     \caption{architecture}
+    \end{figure}
+    \begin{figure}[h]
+    
+    \includegraphics[width=1.2\linewidth, left]{Logical_view.png}
+    \caption{DCMS login}
+    \label{fig:login}
     \end{figure}
     \newpage
     \subsubsection{Implemented Database Tables}
     \begin{figure}[h]
     \centering
     
-    \includegraphics[width=\linewidth]{PATIENT_TABLE.png}
+    \includegraphics[width=0.8\linewidth]{PATIENT_TABLE.png}
     \caption{Patient Table}
     \end{figure}
     \begin{figure}[h]
     \centering
     
-    \includegraphics[width=\linewidth]{DOCTOR_TABLE.png}
+    \includegraphics[width=0.7\linewidth]{DOCTOR_TABLE.png}
     \caption{Doctor Table}
     \end{figure}
     
@@ -435,7 +443,17 @@ $\_$
     \item
     The user needs to be connected to the internet.
     \end{itemize}
-\section{Agile Approach:SCRUM}
+\section{Agile Approach : SCRUM }
+\subsection{Scrum Roles}
+\begin{itemize}
+    \item
+    Product owner - Represents the customer/users.  He Provides the specifications or requirements of the product, along with their priorities. This prioritized list of features is the product backlog.
+    \item
+    Scrum master - Enacts scrum values and practices. They Remove impediments, which are the obstacles that disrupt progress.
+    \item
+    Scrum team -perform analysis, design, program, test, document, and so forth
+    \end{itemize}
+  \section{Agile Approach:SCRUM}
 \subsection{Scrum Roles}
 \begin{itemize}
     \item
@@ -447,7 +465,7 @@ $\_$
     \end{itemize}
   \subsection{Scrum Artifects}
   \subsubsection{User Stories}
-  Patient
+  \textbf{Patient}
   \begin{itemize}
   \item
   As a patient, I want to be able to register on the system, so that I can have credentials to use to access the system
@@ -462,7 +480,7 @@ $\_$
   \item
   As a Patient, I want to be able view my bill, so that I can know all charges I have been charged.
   \end{itemize}
-   Dentist
+   \textbf{Dentist}
    \begin{itemize}
     \item
   As a Dentist, I want to be able to register on the system, so that I can have credentials to use to access the system
@@ -474,7 +492,7 @@ $\_$
   As a Dentist, I want to be able create a Consultation/Bill, so tha I can record all conducted procedures.
    \end{itemize}
    
-   Receptionist
+\textbf{Receptionist}
    
     \begin{itemize}
   \item
@@ -486,7 +504,7 @@ $\_$
   \item
    As a receptionist,  i want to be able to cancel an appointment, so that cancelled appointments are shown as such
    \end{itemize}
-   Administrator:
+   \textbf{Administrator}:
    \begin{itemize}
    \item
    As an Administrator, I want to be able to authorize the creation of a new Doctor/Receptionist so that I can be able to ensure all relevent users are legitimate.
@@ -503,10 +521,42 @@ $\_$
     \end{figure}
     
   \subsubsection{Sprint Backlog}
-  \
-  \subsubsection{Burndown Charts}
-  
+During the first sprint plan meeting, the product backlog was used to develop sprint backlogs.The first sprint comprises of 4 tasks/items. The tasks and their description are given below.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{final.png}
+    \caption{Sprint 1}
+    \label{fig:ERD}
+    \end{figure}
 
+\newpage
+Each task was estimated to take at most 10 hrs.The first sprints ran for 5 days.Daily scrum meetings were conducted to check the progress of each team member and to unblock any impediments.At the end of each sprint,  sprint review meetings were conducted to test and demostrate the functionality of the product.A sprint burn down diagram which shows the progress of the first sprint is given below 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{sprint1.PNG}
+    \caption{Sprint 1 burndown diagram}
+    \label{fig:ERD}
+\end{figure}
+    \newpage
+During the second sprint plan meeting, the product backlog was used to develop sprint backlogs.The second sprint comprises of  6 tasks/items. The tasks and their description are given below.
+
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{sprint2.png}
+    \caption{Sprint 2}
+    \label{fig:ERD}
+\end{figure}
+
+A second sprint of 5 tasks was formed from the product backlog.Each tasks was estimated to take at most 10 hrs and the sprint ran for 9 days.The tasks and their description are given below.A sprint burn down diagram which shows the progress of the second sprint is given below 
+\begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=\linewidth]{sprint3.PNG}
+    \caption{Burn down diagram}
+    \label{fig:ERD}
+    \end{figure}
+    
 \subsection{Sprint planning documents}
 
 Sprint is timeboxed incremental iterations, each aims to produce a potentially shippable increment (PSI).\\
@@ -515,18 +565,68 @@ Sprint 1 - User stories + Fixes for any outstanding bugs
 
 Daily scrums - whats been done, sprint review meeting
 followed by retrospective meeting
-
+\newpage
 \section{Module Descriptions and Demonstrations} 
 \subsection{Sceenshots}
+\begin{figure}[h]
+    \centering 
+    \includegraphics[width=0.7\linewidth]{login.png}
+    \caption{DCMS login}
+    \label{fig:login}
+    \end{figure}
+    
+    \begin{figure}[h]
+    \centering 
+    \includegraphics[width=\linewidth]{UI_create_ patient.png}
+    \caption{Create patient}
+    \label{fig:create_patient}
+    \end{figure}
+    
+    \begin{figure}
+\centering
+\begin{subfigure}{.8\textwidth}
+  \centering
+  \includegraphics[width=0.4\linewidth]{Logical_view.png}
+  \caption{A subfigure}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{new dentist.png}
+  \caption{A subfigure}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{fig:test}
+\end{figure}
+\clearpage
+\newpage
 \section{System development review method} 
 \subsection{Sprint retrospective}
+What went right 
+\begin{itemize}
+\item j
+
+\end{itemize}
+What went wrong
+\begin{itemize}
+\item h
+
+\end{itemize}
+What should we do differently
+\begin{itemize}
+\item k
+\end{itemize}
 \section{System Testing}
+An end-to-end run through the was done, different paths were exhaustively explored for all possible users. 
 \subsection{Unit Tests}
-\subsection*{User Registration}
-\subsection*{Login}
-\subsection*{Appointment(s)}
-\subsection*{Consultation Bill(s)}
+\subsubsection*{User Registration}
+\subsubsection*{Login}
+\subsubsection*{Appointment(s)}
+\subsubsection*{Consultation Bill(s)}
 \subsection{Test Results(Grey Box)} 
+
+
  \end{document}
 
 
