@@ -1,9 +1,7 @@
-\documentclass[11 pt]{article}
+\documentclass[12pt]{article}
 
 \usepackage{graphicx}
-\usepackage[export]{adjustbox}
-\usepackage{caption}
-\usepackage{subcaption}
+
 \usepackage{setspace}
 \setstretch{1.25}
 
@@ -30,45 +28,46 @@ Version 2.0 : Laboratory Exercise-03\\
 \section{Introduction}
 
 \subsection{Purpose}
-This document serves to describe the processes undertaken in the inception of the Dental Clinic Management system software project. The purpose of this document is to provide a detailed description of the DCMS ,a web application.It will give in detail the purpose of the system, features of the system  and the constraints under which the system will operate. An outline of what the software aims to do at each stage, ie problem to be solved. 
+This document serves to describe the processes undertaken in the inception of the Dental Clinic Management system software prototype. The purpose of this document is to provide a detailed description of the DCMS ,a web application.It will give in detail the purpose of the system, features of the system  and the constraints under which the system will operate.
 \subsection{Problem Statement}
-Managing a dental clinic may be cumbersome at times, the paperwork that the receptionist have to do and the time  patients have to spend waiting in queue is excessive. DCMS is system that will remedy this situation by allowing multiple patients at the same time\\
-Hard copy files stored in cabinnets pose a security threat since it is possible for unauthorized personel to gain access because of negligence. The system will allow for the use of username and passwords, a secure measure that ensures that only permited users can see and do certain tasks. Where in the contrary, files can easily fall into the wrong hands, be tampered with or lost.\\
-Human error in the collection and capturing of all data occures where patients either fill in their details incorrectly or the receptionist captures the data wrongly. DCMS will allow for data validation to occur, where the user will be alerted immedeiately if any data is incorrect or missing,ensuring the data is consistent in the database.\\
-Paper files are hard to back up, the database storing capabilities adopted by DCMS will offer the ability to back up all data. \\
-The automation of calculations and instantaneos syncing of events will allow for a well intergrated clinic with real time updates and time saving processing.
+Managing a dental clinic may be cumbersome at times, the paperwork that the receptionist have to do and the time  patients have to spend waiting in queue is excessive.Hard copy files stored in cabinets pose a security threat since it is possible for unauthorized personel to gain access because of negligence.Human error in the collection and capturing of data occurs when patients either fill in their details incorrectly or the receptionist captures the data wrongly.Paper files are hard to back up. 
 \subsection{Project Objectives }
-
- \begin{itemize}
-\item
-Developers-It will provide guidelines for them on features to develop and help plan accordingly which functional requirements will need to be implemented.It will facilitate the programming process.\\
-\item
-Testing/Quality assurance team-It will assist them in putting together the testing plan and identifying bugs in the software.\\
-\item
-Product Owner(Client)- It will help verify the project deliverables and have documentation that outlines what the software will do.\\(CHANGE THIS, could add end user)
+The software is aimed at replacing manual paper systems that currently exists at a dental clinic.Users will remotely have access to relevant services based on requirements.The project objectives are :
+\begin{itemize}
+\item reduce the paper work the receptionist have to do on daily basis
+\item cut the amount of waiting time in queues
+\item ensure and protect patient's privacy
+\item reduce human error in capturing data
+\item reduce paper work for doctors
 \end{itemize}
 \subsection{Stakeholders}
-\subsubsection{Users}
-There are four basic users namely Dentist, patient, Receptionist and Administrator. Each of these user roles will have different goals when interacting with the software.
+Anyone that is influenced by or influences a project is a stakeholder. There are two types of stakeholders , internal and external stakeholders.
 \begin{itemize}
-\item
-A Dentist can login ,view and set their own schedule of appointments. Write out a prescription for a patient and view a patient's profile(medical record).
-\item
-A new patient provides personal details to register as a patient on the system.Returning patients do not need to register,they just login using their username and password.They can also at any time update those personal details. They can then book an appointment. Patients can view their health  records, prescriptions, medical expenses and comment on the services provided.
-\item
-The receptionist logs in with their username and password, views and manages  appointments, performs day open and close activities. He also sends reports to admin and help with registering those patients who that are having problems with registering.
-\item
+\item \textbf{External}
+\begin{itemize}
+\item Patients\\
+Patients are able to make appointments and view their bill 
+\item Dentist\\
+Dentists can login ,view and set their own schedule of appointments. Write      out a prescription for a patient and view a patient's profile(medical record).
+\item Receptionist\\
+receptionist logs in with their username and password, views and manages  appointments, performs day open and close activities. He also sends reports to admin and help with registering those patients who that are having problems with registering.
+\item Admin \\
 The administrator has the authority to add or remove a doctors and receptionist.He grants permission to receptionist  and  dentists the authority to view and generates report.He also has the authority to add or delete patients from system. He also manages the system
 \end{itemize}
-\subsubsection{Developers}
-\subsubsection{Project Management}
-This the link between the product owner and the development team. ????????z 
+\item \textbf{Internal}
+\begin{itemize}
+\item  Scrum team \\
+responsible for developing the software
+\item Product owner\\
+someone in charge of the entire project
+\item Scrum master \\
+ The link between the scrum team and the product owner(project manager)
+\item Equipment suppliers \\
+They supply the hardware needed for the operation of the system.(i.e) Computers
+\end{itemize}
+\end{itemize}
 \subsection{Scope}
-DCMS (Dental Clinic Management System) is a web application that provides support for managing the services of a small dental clinic.
-\subsubsection{Software Benefits and Objectives}
-The software is aimed at replacing manual paper systems that currently exists at a dental clinic.
-Users will remotely have access to relevant services based on requirements.
-Having a digital filing system will reduce human error by having text validations before data is captured. Having database will allow for backups.
+Define what the following sections do
 
 \subsection{Definitions,Acronyms and Abbreviations}
 \begin{tabular}{|p{3cm}|p{9cm}|}
@@ -151,21 +150,6 @@ storage space may be limited.
 Patient's personal information is not protected, it can be accessed by anyone.
 \end{itemize}
 
-\subsubsection{Proposed System}
-DCMS is an automated system that can be accessed via the internet.It has the following advantages.
-\begin{itemize}
-\item
- Easy to store and search for files.
- \item
- Patients can make appointments online and avoid long queues.
- \item
- Each patient has a profile that can only be accessed by authorized users i.e(doctor or receptionist).
- \item
- The system can be accessed remotely.
- 
-
-
-\end{itemize}
 
 \section{Software Requirements Specifications}
 \subsection{Overall Description}t
@@ -181,27 +165,21 @@ DCMS is an automated system that can be accessed via the internet.It has the fol
     \begin{figure}[h]
     \centering
     
-    \includegraphics[width=1.2\linewidth]{architecture.png}
+    \includegraphics[width=\linewidth]{architecture.png}
     \caption{architecture}
-    \end{figure}
-    \begin{figure}[h]
-    
-    \includegraphics[width=1.2\linewidth, left]{Logical_view.png}
-    \caption{DCMS login}
-    \label{fig:login}
     \end{figure}
     \newpage
     \subsubsection{Implemented Database Tables}
     \begin{figure}[h]
     \centering
     
-    \includegraphics[width=0.8\linewidth]{PATIENT_TABLE.png}
+    \includegraphics[width=\linewidth]{PATIENT_TABLE.png}
     \caption{Patient Table}
     \end{figure}
     \begin{figure}[h]
     \centering
     
-    \includegraphics[width=0.7\linewidth]{DOCTOR_TABLE.png}
+    \includegraphics[width=\linewidth]{DOCTOR_TABLE.png}
     \caption{Doctor Table}
     \end{figure}
     
@@ -289,142 +267,6 @@ DCMS will enable patients to book or make appointment and the output will the be
     will be using the system has to go through registration
     first if he/she is first time user or login by providing
     username and password to access the DCMS.The system allows patients to request their bill and the patient can view or print the through system.
-\subsection{Business Rules}
-    \begin{itemize}
-    \item
-    Before a user can log in, they are required to be an existing user on the System. Existing users access the system (log in) using username and password.
-    \begin{itemize}
-    \item
-    New Dentists and Receptionist's require an Administrators authorization to be registered on the system.
-    \item
-    A new patient is required to enter their personal and medical details.
-    \end{itemize}
-    \item
-    An Appointment must be booked by the patient. They have the options of doing so telephonically(Where the receptionist will be the one capturing the appointment) or engaging directly with the system. Booking of an appointment requires viewing the relevant dentist's schedule to identify available slots.
-    \item
-    A Dentist can view their schedule. This means viewing all the appointments that have been booked for the doctor and displayed as of their requirement either Daily,Weekly or Monthly schedule calendar view.
-    \item
-    A consultation is created by a dentist. This follows the arrival of a patient for their appointment and discussions or dental procedures are conducted and recorded. A consultation can also be recorded for a patients failure to arrive for an appointment without cancelling. This consultation type is labelled as missed appointment.
-    \item
-    Generating Bill follows a consultation, this is where all the costs of the medical procedure are recorded. This may also include the recording of a missed appointment charge.
-    \item
-    Authorization is done by an administrator. This is required when new a receptionist or dentist is created. Similarly so when it will be updated or deleted.
-    \end{itemize}
-    
-    
-    \subsubsection{Use Cases}
-    
-\begin{tabular}{|p{3cm}|p{9cm}|}
-\hline
-\textbf{Actor} & \textbf{Description}\\
-\hline
-\textbf{Receptionist} & May assist patient with registration and booking, should they require assistance.\\
-\hline
-\textbf{Administrator}& Administrator is responsible for Doctors registration and other issues that directly related to the system like update or archive if necessary.\\
-\hline
-\textbf{Patient}& Patient may directly interact with the system during registration or booking process, depending on the patient's level of of computer literacy\\
-\hline
-\textbf{Doctor}& May set appointment with the patient, depending on patient's problem \\
-\hline
-
-\end{tabular}
-$\_$
-\\\\\\
-
-\begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
-\hline
-\textbf{Use Case} & \textbf{Description} & \textbf{Related Use case and Relationships} \\
-\hline
-\textbf{Create Patient} & Patient or the Receptionist will interact with this use case. Step involved in this use case is entering demographic data.  &\\
-\hline
-\textbf{Read Patient}& This use case will be used when accessing a patient's data.This includes when making appointment bookings and generating bills & Invoked by the Update Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship.\\
-\hline
-\textbf{Update Patient}& The Receptionist or Patient will mainly interact with this use case. It will be accessed to update a Patient's demographic data & This use case invokes the Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
-\hline
-\textbf{Create Administrator}& An Administrator will interact with this use case. In order for Administrator to have an access to the system, an already existing Administrator should capture relevant data of new Administrator &\\
-\hline
-\textbf{Create Appointment}& The Patient,Receptionist or Doctor will interact with this use case. This use case will be triggered when a user wants to make an appointment. & This use case invokes read doctor and read patient\\
-
-\hline
-
-\end{tabular}
-\begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
-\hline
-\textbf{Read Administrator}& The Administrator will interact with this use case. It will be triggered when Administrator request to view Administrator's profile. & This use case invokes the Update Administrator use case. $\textless\textless$include$\textgreater\textgreater$ relationship.\\
-\hline
-\textbf{Update administrator}& An Administrator will interact with this use case. It will be triggered when there is a change in the demographic data of the Administrator. & This use case invokes the Read Administrator use case. $\textless\textless$include$\textgreater\textgreater$ relationship.\\
-\hline
-\textbf{Archive Administrator}& Administrator will interact with this use case. it will be triggered by the other Administrator to archive an Administrator who no longer has an access to the system due to end employment contract or other reasons.  &\\
-\hline
-\textbf{Create Doctor}& An Administrator will interact with this use case. It will capture Doctor's demographic data. &\\
-\hline
-\textbf{Read Doctor}& This use case is used when a doctors profile will need to be accessed. This will include when booking appointments, recording consultations and generating bill. It will be triggered when a user requests to view Doctor's details & \\
-\hline
-
-\end{tabular}
-
-\begin{tabular}{|p{3cm}|p{4.5cm}|p{4.5cm}|}
-\hline
-\textbf{Create Bill}& The Doctor will interact with this use case. This Involves capturing all charges of operations done on a patient during a consultation. & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
-\hline
-\textbf{Read Bill}& The Doctor,Patient or Receptionist will interact with this use case. This Involves viewing and existing bill.  & This use case invokes the Read Doctor,Read Patient use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
-\hline
-\textbf{Update Doctor}& Administrator will interact with this use case. It will be triggered when an Administrator wants to modify Doctor's details & This use case invokes the Read Doctor use case. $\textless\textless$include$\textgreater\textgreater$ relationship\\
-\hline
-\textbf{Archive Doctor}& Administrator will interact with this use case. It will be triggered when the Doctor no longer granted access to the system due to end of employment contract or other reason &\\
-\hline
-\textbf{Generate Report}& The Project Owner will interact with this use case. It will be accessed when the Project Owner wants to assess the effectiveness of the system. &\\
-\hline
-\end{tabular}
-
-\subsection{Fully Dressed Use Cases}
-\subsubsection{Create patient use case}
-
-\begin{tabular}{|p{3cm}|p{9cm}|}
-\hline
-\textbf{Use case name:}& Create Patient\\
-\hline
-\textbf{Scope:}& Dental Clinical Management System for better health.\\
-\hline
-\textbf{Triggering Event:}& User request to create patient.\\
-\hline
-\textbf{Brief description:}& user request to create a new Patient profile. Either the Patient themselves via mobile phone, desktop, self-service terminal or Receptionist on behalf of the Patient.A form is displayed and prompt for the completion of all relevant data, including: The Patient's firstname, lastname, ID number, date of birth and email(if applicable). A prompt to confirm and save the profile is displayed. The user can double-check the entered data and confirm the creation of the profile. The profile is then created by creating a new record in the Patient table in the data store. Login details are generated and sent to the patient.\\
-\hline
-\textbf{Actor(s):}& Patient (Primary), Receptionist (Primary)\\
-\hline
-\textbf{Related use cases:}& N/A\\
-\hline
-\textbf{Stakeholders and interests:}& 1. \textbf{Patient} - wants all their demographic data (firstname, lastname, ID number, date of birth, mobile number and email address(optional)) to be accurately captured to ensure the completion of their profiles. 2. \textbf{Receptionist} - wants to accurately capture Patient's demographic data (firstname, lastname, ID number, date of birth, mobile number and email address(optional)) on behalf of a computer illiterate Patient.\\
-\hline
-\textbf{Pre-condition:}& N/A\\
-\hline
-\textbf{Post-condition:}& 1. Created Patient's profile recorded in the Patient's data store.  2. Login details are generated and sent to the Patient.\\
-\hline
-\end{tabular}
-
-\subsubsection{Create appointment use case}
-\begin{tabular}{|p{3cm}|p{9cm}|}
-\hline
-\textbf{Use case name:}& Create Appointment\\
-\hline
-\textbf{Scope:}& Dental Clinical Management System for better health.\\
-\hline
-\textbf{Triggering event:}& user request to create Appointment.\\
-\hline
-\textbf{Brief description:}& user request to create new Appointment.This involves Doctor's schedule where patient can select date and time available in the slot. Receptionist may also create appointment on behalf of patient. in case of emergency or serious problem depending on the condition of a patient a Doctor may also create appointment. Patient ID must be read first then time and date has to be selected on the Doctor's schedule and after successful booking confirmation message has to be generated and sent to the patient via email.    \\
-\hline
-\textbf{Actor(s):}& Patient (primary), Doctor (primary), Receptionist (primary).\\
-\hline
-\textbf{Related use cases:}& Read Patient (includes), create consultation (extends).\\
-\hline
-\textbf{Stakeholders and interests:}& \textbf{Patient}- wants to make sure that appointment is done accordingly. 2. \textbf{Receptionist}- wants to accurately make appointment on behalf of those patients who have lack of computer skills. \textbf{Doctor}- wants to make appointment that is urgently and need serious attention. \\
-\hline
-\textbf{Pre-condition}& Patient must exist in the database.\\
-\hline
-\textbf{Post-condition}& Confirmation message must be send via email.\\
-\hline
-\end{tabular}
-\newpage
 \subsubsection{Use Case Diagram}
 
 \begin{figure}[h]
@@ -443,17 +285,7 @@ $\_$
     \item
     The user needs to be connected to the internet.
     \end{itemize}
-\section{Agile Approach : SCRUM }
-\subsection{Scrum Roles}
-\begin{itemize}
-    \item
-    Product owner - Represents the customer/users.  He Provides the specifications or requirements of the product, along with their priorities. This prioritized list of features is the product backlog.
-    \item
-    Scrum master - Enacts scrum values and practices. They Remove impediments, which are the obstacles that disrupt progress.
-    \item
-    Scrum team -perform analysis, design, program, test, document, and so forth
-    \end{itemize}
-  \section{Agile Approach:SCRUM}
+\section{Agile Approach:SCRUM}
 \subsection{Scrum Roles}
 \begin{itemize}
     \item
@@ -543,7 +375,7 @@ During the second sprint plan meeting, the product backlog was used to develop s
 \newpage
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{sprint2.png}
+    \includegraphics[width=\linewidth]{sprint2.PNG}
     \caption{Sprint 2}
     \label{fig:ERD}
 \end{figure}
@@ -556,76 +388,64 @@ A second sprint of 5 tasks was formed from the product backlog.Each tasks was es
     \caption{Burn down diagram}
     \label{fig:ERD}
     \end{figure}
-    
-\subsection{Sprint planning documents}
-
-Sprint is timeboxed incremental iterations, each aims to produce a potentially shippable increment (PSI).\\
-Product backlog(priority list)->after meeting sprint backlog breaking user story to tasks \\
-Sprint 1 - User stories + Fixes for any outstanding bugs
-
-Daily scrums - whats been done, sprint review meeting
-followed by retrospective meeting
-\newpage
+    \newpage
 \section{Module Descriptions and Demonstrations} 
 \subsection{Sceenshots}
-\begin{figure}[h]
-    \centering 
-    \includegraphics[width=0.7\linewidth]{login.png}
-    \caption{DCMS login}
-    \label{fig:login}
-    \end{figure}
-    
-    \begin{figure}[h]
-    \centering 
-    \includegraphics[width=\linewidth]{UI_create_ patient.png}
-    \caption{Create patient}
-    \label{fig:create_patient}
-    \end{figure}
-    
-    \begin{figure}
-\centering
-\begin{subfigure}{.8\textwidth}
-  \centering
-  \includegraphics[width=0.4\linewidth]{Logical_view.png}
-  \caption{A subfigure}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{new dentist.png}
-  \caption{A subfigure}
-  \label{fig:sub2}
-\end{subfigure}
-\caption{A figure with two subfigures}
-\label{fig:test}
-\end{figure}
-\clearpage
-\newpage
 \section{System development review method} 
 \subsection{Sprint retrospective}
 What went right 
 \begin{itemize}
-\item j
+\item 
+
 
 \end{itemize}
 What went wrong
+
 \begin{itemize}
-\item h
+\item Many tasks were underestimated
+\item Scrum meetings were not effective, we did not hold  
 
 \end{itemize}
 What should we do differently
 \begin{itemize}
 \item k
 \end{itemize}
-\section{System Testing}
-An end-to-end run through the was done, different paths were exhaustively explored for all possible users. 
-\subsection{Unit Tests}
-\subsubsection*{User Registration}
-\subsubsection*{Login}
-\subsubsection*{Appointment(s)}
-\subsubsection*{Consultation Bill(s)}
-\subsection{Test Results(Grey Box)} 
 
+
+
+
+
+
+
+
+
+
+
+
+
+\section{System Testing}
+\subsection{Unit Tests}
+Unit testing also called component testing was performed on standalone modules to check whether they were developed correctly. The following standalone modules were tested
+\begin{itemize}
+\item \textbf{Login}
+\begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=\linewidth]{Logins.png}
+    \caption{login testing}
+    \label{fig:ERD}
+    \end{figure}
+\newpage
+\item \textbf{Register}
+\begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=\linewidth]{register.png}
+    \caption{Register testing}
+    \label{fig:ERD}
+    \end{figure}
+
+\end{itemize}
 
  \end{document}
 
