@@ -113,7 +113,18 @@ Json & JavaScript Object Notation is an open-standard file format that uses huma
     \end{itemize}
     \newpage
 
-54\subsection{Project Overview}
+
+
+\section{Software Requirements Specifications}
+
+\subsubsection{Product perspective}
+DCMS will enable patients to book or make appointment and the output will the be date and time in which it is inline with the Doctors schedule. System will
+    also provide a clear schedule which allows patients to see
+    which Doctor is available at a particular slot. Who ever
+    will be using the system has to go through registration
+    first if he/she is first time user or login by providing
+    username and password to access the DCMS.The system allows patients to request their bill and the patient can view or print the through system.
+\subsection{Product Functionality}
 \textbf{Front End tasks:}
     This involves the making of User Interfaces. These are the screens that the users will be seeing when using the system.
     \begin{itemize}
@@ -159,6 +170,24 @@ storage space may be limited.
 \item
 Patient's personal information is not protected, it can be accessed by anyone.
 \end{itemize}
+\begin{figure}
+\clearpage
+\centering
+\begin{subfigure}{.6\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth, left]{new_patient_paper_form.jpeg}
+  \caption{Patient personal details}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.6\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{patient_paper_form_med.jpeg}
+  \caption{Medical details}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Paper forms to be replaced}
+\label{fig:test}
+\end{figure}
 
 \subsubsection{Proposed System}
 DCMS is an automated system that can be accessed via the internet.It has the following advantages.
@@ -171,36 +200,15 @@ DCMS is an automated system that can be accessed via the internet.It has the fol
  Each patient has a profile that can only be accessed by authorized users i.e(doctor or receptionist).
  \item
  The system can be accessed remotely.
- 
-
-
 \end{itemize}
-
-\section{Software Requirements Specifications}
-\subsection{Overall Description}
-Based on 
-\begin{figure}
-
-\centering
-\begin{subfigure}{.6\textwidth}
-  \centering
-  \includegraphics[width=1.2\linewidth, left]{new_patient_paper_form.jpeg}
-  \caption{Patient personal details}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.6\textwidth}
-  \centering
-  \includegraphics[width=1.2\linewidth]{patient_paper_form_med.jpeg}
-  \caption{Medical details}
-  \label{fig:sub2}
-\end{subfigure}
-\caption{Paper forms to be replaced}
-\label{fig:test}
-\end{figure}
-\subsubsection{Product perspective}
-
-\subsection{Functionality}
 \subsection{Usability}
+\subsection{Assumptions and dependencies}
+\begin{itemize}
+\item
+The receptionist and dentist all have computers that they can use at the clinic that can also offer support to patients that need the hardware or technical suport. 
+\item
+Assume financial management has instant payments notification in place. This is to allow the system to recieve information on payments so that udates can be made on the respective patients bill.
+\end{itemize}
 \newpage   
 \section{Project Design and Architecture}
  
@@ -310,13 +318,7 @@ The supported Operating Systems:
     Windows Phone 8.1+
 \end{itemize}
 \end{itemize}
-    \subsection{Product functions}
-DCMS will enable patients to book or make appointment and the output will the be date and time in which it is inline with the Doctors schedule. System will
-    also provide a clear schedule which allows patients to see
-    which Doctor is available at a particular slot. Who ever
-    will be using the system has to go through registration
-    first if he/she is first time user or login by providing
-    username and password to access the DCMS.The system allows patients to request their bill and the patient can view or print the through system.
+    
 \subsection{Business Rules}
     \begin{itemize}
     \item
@@ -471,16 +473,7 @@ $\_$
     \item
     The user needs to be connected to the internet.
     \end{itemize}
-\section{Agile Approach : SCRUM }
-\subsection{Scrum Roles}
-\begin{itemize}
-    \item
-    Product owner - Represents the customer/users.  He Provides the specifications or requirements of the product, along with their priorities. This prioritized list of features is the product backlog.
-    \item
-    Scrum master - Enacts scrum values and practices. They Remove impediments, which are the obstacles that disrupt progress.
-    \item
-    Scrum team -perform analysis, design, program, test, document, and so forth
-    \end{itemize}
+
   \section{Agile Approach:SCRUM}
 \subsection{Scrum Roles}
 \begin{itemize}
@@ -595,7 +588,7 @@ Daily scrums - whats been done, sprint review meeting
 followed by retrospective meeting
 \clearpage
 \section{Module Descriptions and Demonstrations} 
-\subsection{Sceenshots}
+\subsection{User login}
 \begin{figure}[h]
     \centering 
     \includegraphics[width=0.7\linewidth]{login.png}
@@ -606,6 +599,7 @@ All users aere requierd to login before they can begin using the software's main
 The doctor's username is taken as the doctor's practice number, all other users use their email addresses as usernames.
 Data validation is done on the screen to show appropriate error messages if anything is incorrect(refer to 
 \hyperref[sec:system_testing]{System Testing} )
+\subsection{User Registration}
     \begin{figure}[h]
     \centering 
     \includegraphics[width=\linewidth]{UI_create_ patient.png}
@@ -613,27 +607,82 @@ Data validation is done on the screen to show appropriate error messages if anyt
     \label{fig:create_patient}
     \end{figure}
  Should the user be new and without a username and password, they are required to register as a new user. Based on the input of the combo box, the correct new user portal is loaded. The above the User Interface shows the registration of a new patient. 
- 
- \begin{figure}[h]
-    \centering 
-    \includegraphics[width=\linewidth]{new dentist.png}
-    \caption{Create patient}
-    \label{fig:Create New Patient}
-    \end{figure}
-The above user interface shows the registration of a new dentist. The button on the top left (Authorize), is only clickable from the administrator point of view. After the dentist has entered all their required data, in order to be able to use the created credentials to log in, the new dentist must first be authorized(approved to be legitimate) by the administrator. 
 \begin{figure}[h]
     \centering 
     \includegraphics[width=\linewidth]{patientmedicalcond.png}
     \caption{Create patient}
-    \label{fig:Appointment}
+    \label{fig:Patient Medical details}
+    \end{figure} 
+ \begin{figure}[h]
+ \clearpage
+    \centering 
+    \includegraphics[width=.6\linewidth]{new dentist.png}
+    \caption{Create Dentist}
+    \label{fig:Create New Dentist}
     \end{figure}
+The above user interface shows the registration of a new dentist. The button on the top left (Authorize), is only clickable from the administrator point of view. After the dentist has entered all their required data, in order to be able to use the created credentials to log in, the new dentist must first be authorized(approved to be legitimate) by the administrator. 
+
 \begin{figure}[h]
     \centering 
     \includegraphics[width=\linewidth]{new_receptionist.png}
-    \caption{Create patient}
+    \caption{Create Receptionist}
     \label{fig:Create New Receptionist}
     \end{figure}
-    
+    \clearpage
+    \subsection{Home Screens}
+    Below shows the different home screens seen by different user types after logging in, the current username is what appears in the top panel.
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\linewidth]{receptionist_home.png}
+    \caption{Receptionist Home Screen}
+    \label{fig:ERD}
+    \end{figure}
+The receptionist has 4 possible options to click.
+\begin{itemize}
+\item
+"Appointment" allows them to either view or create a new appointment for a patient. Patients can also call to cancel appointments
+\item
+"New Patient" takes them to the page a new patient can be registered.
+\item
+"Bills" takes a look at all invoices recorded for either a dentist or patient. This option can be used for patients without capabilities of using the system remotely and would like to either have the bill printed or sent in some other way. This is where all the financial management is done by the receptionist.
+\item
+"Update Details" Receptionsit can update thier own details ranging from personal detials to password
+\end{itemize}  
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\linewidth]{patient_home.png}
+    \caption{Patient Home Screen}
+    \label{fig:ERD}
+    \end{figure}
+    \begin{itemize}
+    \item
+    "Appointment"-A patient can either set, view or cancel appointment. Appointment cancellation is done to avoid being charged a missed appointment fees.    
+\item
+"View Bill(s)"
+\item 
+"Update Details"
+\item
+"Prescription" patient can view the e-prescription made by dentist. This can be shown to the pharmacist when collecting the medication. 
+    \clearpage
+    \end{itemize}
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\linewidth]{dr_home.png}
+    \caption{Dentist Home Screen}
+    \label{fig:ERD}
+    \end{figure}
+    \begin{itemize}
+     \item
+    "Appointment" A dentist can view their schedule for any given time.
+\item
+"Consultation" The dentist begins recording the medical procedures and the charges of each. This is what becomes the invoice or bill of the patient.
+\item 
+"Prescription" Dentist creates an e-prescription for the patient.
+\item
+"Udate Details" Dentist can update their personal details as well as password.
+    \end{itemize}
+    \clearpage
+    \subsection{Appointments}
     \begin{figure}[h]
     \centering 
     \includegraphics[width=\linewidth]{new_appointment.png}
@@ -641,7 +690,8 @@ The above user interface shows the registration of a new dentist. The button on 
     \label{fig:Appointment}
     \end{figure}
     The creation  of a new appointment can be done by either the patient or the receptionist. The details recorded include the patient making the booking and the doctor being booked for. Each patient has a prefered dentist, however one has the option of booking to see a different dentist who may have a different specialization for the needed appointments. \\
-The appointment has a date and time selection, the dates available are from the schedule of the selected doctor for the given week. This is to ensure that appointments are not double booked for doctors. 
+The appointment has a date and time selection, the dates available are from the schedule of the selected doctor for the given week. This is to ensure that appointments are not double booked for doctors. \\
+Patients that arrive without prior booking who form part of the triage, are attended to by the receptionist. The receptionist can then allocate this patient an appointment right then and there where the dentist can also see in his own schedule that a new priority visit is in line. 
 
 \begin{figure}[h]
     \centering 
@@ -649,36 +699,33 @@ The appointment has a date and time selection, the dates available are from the 
     \caption{Create Appointment}
     \label{fig:Appointment}
     \end{figure}
-The illustration above shows how a new appointment is sctructure and stored. The php admin 
- \begin{figure}[h]
-    \centering 
-    \includegraphics[width=\linewidth]{consultation.png}
-    \caption{Create patient}
-    \label{fig:Appointment}
-    \end{figure}
-    
- \begin{figure}[h]
-    \centering 
-    \includegraphics[width=1.2\linewidth]{patientmedicalcond.png}
-    \caption{Create patient}
-    \label{fig:Appointment}
-    \end{figure}
-\clearpage
+The illustration above shows how a new appointment is sctructure and stored. The phpMyAdmin tool is used for administrating MySQL, and from the table extract above we can see that the appointment schedule details are captured from what is entered in the front end correctly.\\
+Once an appointment has been set, dentists and patients can view their respective schedules from their portals on the system. A dentist can then select whichever appointment is next and begin recording the consulation as described below. \\
 
+\subsection{Finance Management}
+ \begin{figure}[h]
+    \centering 
+    \includegraphics[width=0.6\linewidth]{consultation.png}
+    \caption{Create patient}
+    \label{fig:Add consultation procedure and cost}
+    \end{figure}
+After a consultation has been conducted, the dentist or receptionist is then tasked with      capturing the procedures and costs of what was done. The prices of procedures were found to be different from patient and thus we found that it was best to allow the dentists to enter the cost charged for each patient. Each description and cost can be thought of as a line of record that will appear on the bill or invoice.\\
+Once all procedure items have been recorded and the bill is complete, the patient is then able to view their bill under their system portal. Within that page the dentist's payment details and conditions are displayed. When payments are made, the bill balance is updated.
 \newpage
+
 \section{System development review method} 
 \subsection{Sprint retrospective}
-What went right  be
+What went right:
 \begin{itemize}
 \item j
 
 \end{itemize}
-What went wrong
+What went wrong:
 \begin{itemize}
 \item h
 
 \end{itemize}
-What should we do differently
+What should we do differently:
 \begin{itemize}
 \item k
 \end{itemize}

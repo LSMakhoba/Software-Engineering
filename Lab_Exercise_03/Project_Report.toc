@@ -7,40 +7,40 @@
 \contentsline {subsubsection}{\numberline {1.5.1}Software Benefits and Objectives}{5}{subsubsection.1.5.1}
 \contentsline {subsection}{\numberline {1.6}Definitions,Acronyms and Abbreviations}{6}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}References}{6}{subsection.1.7}
-\contentsline {subsection}{\numberline {1.8}Project Overview}{7}{subsection.1.8}
-\contentsline {subsubsection}{\numberline {1.8.1}Existing System}{7}{subsubsection.1.8.1}
-\contentsline {subsubsection}{\numberline {1.8.2}Proposed System}{8}{subsubsection.1.8.2}
-\contentsline {section}{\numberline {2}Software Requirements Specifications}{8}{section.2}
-\contentsline {subsection}{\numberline {2.1}Overall Description}{8}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Product perspective}{8}{subsubsection.2.1.1}
-\contentsline {subsection}{\numberline {2.2}Functionality}{8}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Usability}{8}{subsection.2.3}
-\contentsline {section}{\numberline {3}Project Design and Architecture}{10}{section.3}
-\contentsline {subsubsection}{\numberline {3.0.1}Architecture}{10}{subsubsection.3.0.1}
-\contentsline {subsubsection}{\numberline {3.0.2}Implemented Database Tables}{11}{subsubsection.3.0.2}
-\contentsline {subsubsection}{\numberline {3.0.3}Entity Relationship Diagram}{11}{subsubsection.3.0.3}
-\contentsline {subsubsection}{\numberline {3.0.4}Software Tools}{11}{subsubsection.3.0.4}
-\contentsline {subsubsection}{\numberline {3.0.5}Hardware Requirements}{11}{subsubsection.3.0.5}
-\contentsline {subsection}{\numberline {3.1}Product functions}{13}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Business Rules}{13}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Use Cases}{15}{subsubsection.3.2.1}
-\contentsline {subsection}{\numberline {3.3}Fully Dressed Use Cases}{20}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Create patient use case}{20}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Create appointment use case}{21}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Use Case Diagram}{22}{subsubsection.3.3.3}
-\contentsline {subsection}{\numberline {3.4}Project Constraints}{22}{subsection.3.4}
-\contentsline {section}{\numberline {4}Agile Approach : SCRUM }{23}{section.4}
-\contentsline {subsection}{\numberline {4.1}Scrum Roles}{23}{subsection.4.1}
-\contentsline {section}{\numberline {5}Agile Approach:SCRUM}{23}{section.5}
-\contentsline {subsection}{\numberline {5.1}Scrum Roles}{23}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Scrum Artifects}{23}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}User Stories}{23}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Product Backlog}{25}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Sprint Backlog}{25}{subsubsection.5.2.3}
-\contentsline {subsection}{\numberline {5.3}Sprint planning documents}{29}{subsection.5.3}
-\contentsline {section}{\numberline {6}Module Descriptions and Demonstrations}{31}{section.6}
-\contentsline {subsection}{\numberline {6.1}Sceenshots}{31}{subsection.6.1}
-\contentsline {section}{\numberline {7}System development review method}{37}{section.7}
-\contentsline {subsection}{\numberline {7.1}Sprint retrospective}{37}{subsection.7.1}
-\contentsline {section}{\numberline {8}System Testing}{37}{section.8}
-\contentsline {subsection}{\numberline {8.1}Unit Tests}{37}{subsection.8.1}
+\contentsline {section}{\numberline {2}Software Requirements Specifications}{7}{section.2}
+\contentsline {subsubsection}{\numberline {2.0.1}Product perspective}{7}{subsubsection.2.0.1}
+\contentsline {subsection}{\numberline {2.1}Product Functionality}{7}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Existing System}{8}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Proposed System}{8}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Usability}{10}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Assumptions and dependencies}{10}{subsection.2.3}
+\contentsline {section}{\numberline {3}Project Design and Architecture}{11}{section.3}
+\contentsline {subsubsection}{\numberline {3.0.1}Architecture}{11}{subsubsection.3.0.1}
+\contentsline {subsubsection}{\numberline {3.0.2}Implemented Database Tables}{12}{subsubsection.3.0.2}
+\contentsline {subsubsection}{\numberline {3.0.3}Entity Relationship Diagram}{12}{subsubsection.3.0.3}
+\contentsline {subsubsection}{\numberline {3.0.4}Software Tools}{12}{subsubsection.3.0.4}
+\contentsline {subsubsection}{\numberline {3.0.5}Hardware Requirements}{12}{subsubsection.3.0.5}
+\contentsline {subsection}{\numberline {3.1}Business Rules}{14}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Use Cases}{16}{subsubsection.3.1.1}
+\contentsline {subsection}{\numberline {3.2}Fully Dressed Use Cases}{21}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Create patient use case}{21}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Create appointment use case}{22}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Use Case Diagram}{23}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Project Constraints}{23}{subsection.3.3}
+\contentsline {section}{\numberline {4}Agile Approach:SCRUM}{24}{section.4}
+\contentsline {subsection}{\numberline {4.1}Scrum Roles}{24}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Scrum Artifects}{24}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}User Stories}{24}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Product Backlog}{26}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Sprint Backlog}{26}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Sprint planning documents}{29}{subsection.4.3}
+\contentsline {section}{\numberline {5}Module Descriptions and Demonstrations}{31}{section.5}
+\contentsline {subsection}{\numberline {5.1}User login}{31}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}User Registration}{31}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Home Screens}{35}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Appointments}{38}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Finance Management}{39}{subsection.5.5}
+\contentsline {section}{\numberline {6}System development review method}{41}{section.6}
+\contentsline {subsection}{\numberline {6.1}Sprint retrospective}{41}{subsection.6.1}
+\contentsline {section}{\numberline {7}System Testing}{41}{section.7}
+\contentsline {subsection}{\numberline {7.1}Unit Tests}{41}{subsection.7.1}

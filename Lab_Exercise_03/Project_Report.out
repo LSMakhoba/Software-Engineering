@@ -7,40 +7,40 @@
 \BOOKMARK [3][-]{subsubsection.1.5.1}{Software Benefits and Objectives}{subsection.1.5}% 7
 \BOOKMARK [2][-]{subsection.1.6}{Definitions,Acronyms and Abbreviations}{section.1}% 8
 \BOOKMARK [2][-]{subsection.1.7}{References}{section.1}% 9
-\BOOKMARK [2][-]{subsection.1.8}{Project Overview}{section.1}% 10
-\BOOKMARK [3][-]{subsubsection.1.8.1}{Existing System}{subsection.1.8}% 11
-\BOOKMARK [3][-]{subsubsection.1.8.2}{Proposed System}{subsection.1.8}% 12
-\BOOKMARK [1][-]{section.2}{Software Requirements Specifications}{}% 13
-\BOOKMARK [2][-]{subsection.2.1}{Overall Description}{section.2}% 14
-\BOOKMARK [3][-]{subsubsection.2.1.1}{Product perspective}{subsection.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.2}{Functionality}{section.2}% 16
-\BOOKMARK [2][-]{subsection.2.3}{Usability}{section.2}% 17
-\BOOKMARK [1][-]{section.3}{Project Design and Architecture}{}% 18
-\BOOKMARK [2][-]{subsubsection.3.0.1}{Architecture}{section.3}% 19
-\BOOKMARK [3][-]{subsubsection.3.0.2}{Implemented Database Tables}{subsubsection.3.0.1}% 20
-\BOOKMARK [3][-]{subsubsection.3.0.3}{Entity Relationship Diagram}{subsubsection.3.0.1}% 21
-\BOOKMARK [3][-]{subsubsection.3.0.4}{Software Tools}{subsubsection.3.0.1}% 22
-\BOOKMARK [3][-]{subsubsection.3.0.5}{Hardware Requirements}{subsubsection.3.0.1}% 23
-\BOOKMARK [2][-]{subsection.3.1}{Product functions}{section.3}% 24
-\BOOKMARK [2][-]{subsection.3.2}{Business Rules}{section.3}% 25
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Use Cases}{subsection.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.3}{Fully Dressed Use Cases}{section.3}% 27
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Create patient use case}{subsection.3.3}% 28
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Create appointment use case}{subsection.3.3}% 29
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Use Case Diagram}{subsection.3.3}% 30
-\BOOKMARK [2][-]{subsection.3.4}{Project Constraints}{section.3}% 31
-\BOOKMARK [1][-]{section.4}{Agile Approach : SCRUM }{}% 32
-\BOOKMARK [2][-]{subsection.4.1}{Scrum Roles}{section.4}% 33
-\BOOKMARK [1][-]{section.5}{Agile Approach:SCRUM}{}% 34
-\BOOKMARK [2][-]{subsection.5.1}{Scrum Roles}{section.5}% 35
-\BOOKMARK [2][-]{subsection.5.2}{Scrum Artifects}{section.5}% 36
-\BOOKMARK [3][-]{subsubsection.5.2.1}{User Stories}{subsection.5.2}% 37
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Product Backlog}{subsection.5.2}% 38
-\BOOKMARK [3][-]{subsubsection.5.2.3}{Sprint Backlog}{subsection.5.2}% 39
-\BOOKMARK [2][-]{subsection.5.3}{Sprint planning documents}{section.5}% 40
-\BOOKMARK [1][-]{section.6}{Module Descriptions and Demonstrations}{}% 41
-\BOOKMARK [2][-]{subsection.6.1}{Sceenshots}{section.6}% 42
-\BOOKMARK [1][-]{section.7}{System development review method}{}% 43
-\BOOKMARK [2][-]{subsection.7.1}{Sprint retrospective}{section.7}% 44
-\BOOKMARK [1][-]{section.8}{System Testing}{}% 45
-\BOOKMARK [2][-]{subsection.8.1}{Unit Tests}{section.8}% 46
+\BOOKMARK [1][-]{section.2}{Software Requirements Specifications}{}% 10
+\BOOKMARK [2][-]{subsubsection.2.0.1}{Product perspective}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.1}{Product Functionality}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Existing System}{subsection.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Proposed System}{subsection.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.2}{Usability}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.3}{Assumptions and dependencies}{section.2}% 16
+\BOOKMARK [1][-]{section.3}{Project Design and Architecture}{}% 17
+\BOOKMARK [2][-]{subsubsection.3.0.1}{Architecture}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.3.0.2}{Implemented Database Tables}{subsubsection.3.0.1}% 19
+\BOOKMARK [3][-]{subsubsection.3.0.3}{Entity Relationship Diagram}{subsubsection.3.0.1}% 20
+\BOOKMARK [3][-]{subsubsection.3.0.4}{Software Tools}{subsubsection.3.0.1}% 21
+\BOOKMARK [3][-]{subsubsection.3.0.5}{Hardware Requirements}{subsubsection.3.0.1}% 22
+\BOOKMARK [2][-]{subsection.3.1}{Business Rules}{section.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Use Cases}{subsection.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.2}{Fully Dressed Use Cases}{section.3}% 25
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Create patient use case}{subsection.3.2}% 26
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Create appointment use case}{subsection.3.2}% 27
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Use Case Diagram}{subsection.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.3}{Project Constraints}{section.3}% 29
+\BOOKMARK [1][-]{section.4}{Agile Approach:SCRUM}{}% 30
+\BOOKMARK [2][-]{subsection.4.1}{Scrum Roles}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.2}{Scrum Artifects}{section.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.2.1}{User Stories}{subsection.4.2}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Product Backlog}{subsection.4.2}% 34
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Sprint Backlog}{subsection.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.3}{Sprint planning documents}{section.4}% 36
+\BOOKMARK [1][-]{section.5}{Module Descriptions and Demonstrations}{}% 37
+\BOOKMARK [2][-]{subsection.5.1}{User login}{section.5}% 38
+\BOOKMARK [2][-]{subsection.5.2}{User Registration}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.3}{Home Screens}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.4}{Appointments}{section.5}% 41
+\BOOKMARK [2][-]{subsection.5.5}{Finance Management}{section.5}% 42
+\BOOKMARK [1][-]{section.6}{System development review method}{}% 43
+\BOOKMARK [2][-]{subsection.6.1}{Sprint retrospective}{section.6}% 44
+\BOOKMARK [1][-]{section.7}{System Testing}{}% 45
+\BOOKMARK [2][-]{subsection.7.1}{Unit Tests}{section.7}% 46
