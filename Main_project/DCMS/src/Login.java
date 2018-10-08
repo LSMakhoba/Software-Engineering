@@ -21,6 +21,7 @@ public class Login extends javax.swing.JFrame {
     private String name;
     private String lastname;
     private String fullname;
+    private String author;
     
     /**
      * Creates new form Login
@@ -100,13 +101,16 @@ public class Login extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(comb_usrtype, 0, 184, Short.MAX_VALUE)
-                            .addComponent(warn_message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtf_user_id, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
                             .addComponent(txtf_login_password)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
                                 .addComponent(btn_login, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(123, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(124, Short.MAX_VALUE)
+                .addComponent(warn_message, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +158,7 @@ public class Login extends javax.swing.JFrame {
         // user id
         if(user_practice_number.equals(""))
          {
-             warn_message.setText("please enter your user email");
+             warn_message.setText("please enter your user username");
              return;
          }
 
@@ -175,12 +179,19 @@ public class Login extends javax.swing.JFrame {
             return;
         }
         else if(comb_usrtype.getSelectedItem() == "Doctor")
-        {
+        {       
                 //execute only if the input from th user
                 //exist in database
                  if(validate_usertype("Doctor") && usertype_fullname("Doctor"))
-                 {
-                    fullname = name+" "+lastname; 
+                 {                                                      
+                    check_authorization();
+                    if(author.equals("false"))
+                    {
+                        warn_message.setText("contact administrator for authorization"); 
+                        return;
+                    }
+                     
+                     fullname = name+" "+lastname; 
                     new DoctorHome(fullname).setVisible(true);
                     this.setVisible(false);
                  }
@@ -270,11 +281,6 @@ public class Login extends javax.swing.JFrame {
             {
                 correctness = true;
             }
-
-            if(ps.executeUpdate()>0)
-            {
-                JOptionPane.showMessageDialog(null, "login was successfully");
-            }
         }
         catch(SQLException sq)
         {
@@ -360,13 +366,39 @@ public class Login extends javax.swing.JFrame {
         
         return statement;
     }
+    
+   public void check_authorization()
+    {
+        PreparedStatement ps;
+        ResultSet rs;
+        
+        String quiry =  "select  AUTHORIZED from DOCTOR where PRACTICE_NUMBER=?";
+        
+        try
+        {
+            ps = Connect2database.getConnection().prepareStatement(quiry);
+
+            ps.setString(1, user_practice_number);
+
+            rs = ps.executeQuery();
+            
+            if(rs.next())
+            {
+                author = rs.getString("AUTHORIZED");
+            }
+        }
+        catch(SQLException sq)
+        {
+            sq.getSQLState();
+        }
+        }    
      
     //login erro message
     public void login_error_message()
     {
         txtf_user_id.setText("");
         txtf_login_password.setText("");
-        warn_message.setText("incorrect userid or password");
+        warn_message.setText("incorrect username or password");
     }
     
     /**

@@ -87,6 +87,7 @@ public class Patient extends javax.swing.JFrame {
         patient_address3 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         lblmissing_column = new javax.swing.JLabel();
+        goto_login1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -236,6 +237,14 @@ public class Patient extends javax.swing.JFrame {
         lblmissing_column.setForeground(java.awt.Color.red);
         lblmissing_column.setText(".");
 
+        goto_login1.setForeground(java.awt.Color.red);
+        goto_login1.setText("            Already a user?");
+        goto_login1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goto_login1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -295,7 +304,10 @@ public class Patient extends javax.swing.JFrame {
                         .addGap(222, 222, 222))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(lblmissing_column, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(272, 272, 272))))
+                        .addGap(272, 272, 272))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(goto_login1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(271, 271, 271))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,7 +389,9 @@ public class Patient extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(goto_login1)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(25, 25, 112));
@@ -596,6 +610,12 @@ public class Patient extends javax.swing.JFrame {
       System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void goto_login1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goto_login1MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_goto_login1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -633,7 +653,7 @@ public class Patient extends javax.swing.JFrame {
        
     }
     
-    //inserting data into patint table
+    //inserting data into patient table
     public void create_patient()
     {
         
@@ -663,7 +683,7 @@ public class Patient extends javax.swing.JFrame {
             if(ps.executeUpdate()>0)
             {
                 
-                JOptionPane.showMessageDialog(null, "patient detatials was captured successfully");
+                JOptionPane.showMessageDialog(null, "patient detials was captured successfully");
             }
             
         }catch(SQLException sq)
@@ -745,6 +765,7 @@ public class Patient extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> comb_province;
+    private javax.swing.JLabel goto_login1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

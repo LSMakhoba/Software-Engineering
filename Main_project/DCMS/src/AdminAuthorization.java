@@ -134,15 +134,15 @@ public class AdminAuthorization extends javax.swing.JFrame {
           
         if(user_authorization())
         {
-            changeto_true();
+            new Doctor(practice_number).setVisible(true);
+            this.setVisible(false);
         }
         
         
-        //new Doctor("Authorize").setVisible(true);
-        //this.setVisible(false);
+
     }//GEN-LAST:event_lblview_doctorMouseClicked
 
-     public boolean user_authorization()
+    public boolean user_authorization()
     {
         PreparedStatement ps;
         ResultSet rs;
@@ -172,30 +172,6 @@ public class AdminAuthorization extends javax.swing.JFrame {
         
         return correctness;
     }
-     
-     public void changeto_true()
-     {
-        PreparedStatement ps;
-        
-        String quiry = "UPDATE `DOCTOR` SET `AUTHORIZED`=? WHERE PRACTICE_NUMBER=?";
-        
-        try
-        {
-            ps = Connect2database.getConnection().prepareStatement(quiry);
-
-            ps.setString(1, "true");
-            ps.setString(2, practice_number);
-            
-            if(ps.executeUpdate()>0)
-            {
-                JOptionPane.showMessageDialog(null, "Doctor authorized ");
-            }
-        }
-        catch(SQLException sq)
-        {
-            sq.getSQLState();
-        }         
-     }
     
     /**
      * @param args the command line arguments

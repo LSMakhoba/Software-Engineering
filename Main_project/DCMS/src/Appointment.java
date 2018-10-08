@@ -3,9 +3,14 @@ import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,11 +24,29 @@ import javax.swing.JOptionPane;
  */
 public class Appointment extends javax.swing.JFrame {
 
+    PreparedStatement  p_s;
+    private int patient_id=-1;
+    private int doctor_id=-1;
+    private int receptionist_id=-1;
+    private String patient_name ="";
+    private String check_in="";
+    private String check_out="";
+    private String booking_date="";
+    private String doctor_name="";
+    private String current_date="";
+    private String patient_surname="";
+    ArrayList<Get_data> list2 = new ArrayList<Get_data>();
+    
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    SimpleDateFormat sdf_day = new SimpleDateFormat("EEEE");
+    SimpleDateFormat sdf_table = new SimpleDateFormat("dd-MMMM-yyyy");
+    
+    
+    
     /**
      * Creates new form Appointment
      */
-        String[] btn = {"btn_7","btn_8","btn_9","btn_10","btn_11","btn_12",
-        "btn_13","btn_14","btn_15","btn_16","btn_17","btn_18","btn_19","btn_20"};
+
     public Appointment() {
         initComponents();
 
@@ -62,11 +85,12 @@ public class Appointment extends javax.swing.JFrame {
         hr_to = new javax.swing.JComboBox<>();
         hr_from = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        user = new javax.swing.JComboBox<>();
+        select_dr_name = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtf_patient_id = new javax.swing.JTextField();
+        select_usertype = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tblbookings = new javax.swing.JTable();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -159,9 +183,14 @@ public class Appointment extends javax.swing.JFrame {
         jButton10.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jButton10.setForeground(java.awt.Color.white);
         jButton10.setText("Cancel");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         show_dat.setBackground(java.awt.Color.green);
-        show_dat.setFont(new java.awt.Font("Ubuntu", 0, 20)); // NOI18N
+        show_dat.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         show_dat.setForeground(java.awt.Color.black);
         show_dat.setText("date");
 
@@ -176,11 +205,17 @@ public class Appointment extends javax.swing.JFrame {
 
         jLabel1.setText("To");
 
-        user.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor ID", "Dr 1", "Dr 2", "Dr 2","Dr 3" }));
+        select_dr_name.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Dr", "Dr Mkhize", "Dr Klein", "Dr Adams" }));
 
-        jLabel2.setText("Patient ID");
+        jLabel2.setText("Patient ID:");
 
-        jTextField1.setText("jTextField1");
+        txtf_patient_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtf_patient_idActionPerformed(evt);
+            }
+        });
+
+        select_usertype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select usertype", "Patient", "Doctor", "Receptionist" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -235,33 +270,37 @@ public class Appointment extends javax.swing.JFrame {
                                         .addComponent(btn_9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btn_10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(choosen_date, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(choosen_date, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(select_dr_name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(show_dat, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtf_patient_id, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(select_usertype, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(user, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(show_dat)
-                .addGap(140, 140, 140))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(select_dr_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(select_usertype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                    .addComponent(txtf_patient_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(show_dat)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(choosen_date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(hr_to)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -279,7 +318,7 @@ public class Appointment extends javax.swing.JFrame {
                     .addComponent(btn_12)
                     .addComponent(btn_13)
                     .addComponent(btn_14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_15)
                     .addComponent(btn_16)
@@ -296,33 +335,33 @@ public class Appointment extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tblbookings.setBackground(new java.awt.Color(115, 101, 152));
+        tblbookings.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        tblbookings.setForeground(java.awt.Color.white);
+        tblbookings.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"08:00-09:00", null, null, null, null, null},
-                {"09:00-10:00", null, null, null, null, null},
-                {"10:00-11:00", null, null, null, null, null},
-                {"11:00-12:00", null, null, null, null, null},
-                {"12:00-13:00", null, null, null, null, null},
-                {"13:00-14:00", null, null, null, null, null},
-                {"14:00-15:00", null, null, null, null, null},
-                {"15:00-16:00", null, null, null, null, null},
-                {"16:00-17:00", null, null, null, null, null}
+
             },
             new String [] {
-                "Time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+                "Date", "Time", "Patient name", "Dr name"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setMinWidth(50);
+        jScrollPane2.setViewportView(tblbookings);
+        if (tblbookings.getColumnModel().getColumnCount() > 0) {
+            tblbookings.getColumnModel().getColumn(0).setMinWidth(250);
+            tblbookings.getColumnModel().getColumn(0).setPreferredWidth(250);
+            tblbookings.getColumnModel().getColumn(0).setMaxWidth(100);
+            tblbookings.getColumnModel().getColumn(1).setMinWidth(10);
+            tblbookings.getColumnModel().getColumn(2).setMinWidth(150);
+            tblbookings.getColumnModel().getColumn(3).setMinWidth(10);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -330,7 +369,7 @@ public class Appointment extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -342,7 +381,7 @@ public class Appointment extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(918, 482));
+        setSize(new java.awt.Dimension(1241, 482));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -355,6 +394,10 @@ public class Appointment extends javax.swing.JFrame {
          for(int r = hr_from.getSelectedIndex()+7; r<=hr_to.getSelectedIndex()+8;r++)
                       change_colour(r);
         create_appointment();
+        fect_doctor_name();
+        fect_patient_name();
+        get_schedule();
+        add_to_table();
         
          
     }//GEN-LAST:event_bookMouseClicked
@@ -368,14 +411,19 @@ public class Appointment extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_hr_fromActionPerformed
 
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void txtf_patient_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtf_patient_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtf_patient_idActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
-    
-    
-    PreparedStatement  p_s;
-    int id = -1;
+
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -414,30 +462,34 @@ public class Appointment extends javax.swing.JFrame {
     public void create_appointment()
     {
         PreparedStatement ps;
-        
-         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+      
          String conv_dat = sdf.format(choosen_date.getDate());
          show_dat.setText(conv_dat);
         
         String insert = "";
         
-         if(user.getSelectedItem()== "Patient" )
+            if(select_usertype.getSelectedIndex()==0)
+            {
+                show_dat.setText("please select user type");
+                return;
+            }
+            else if(select_usertype.getSelectedItem()== "Patient")
             {
                 insert = "INSERT INTO `APPOINTMENT`(`DATE`, `CHECKIN`, `CHECKOUT`,"
-                + " `PATIENT_ID`) "
-                + "VALUES (?,?,?,?)";
+                + " `DOCTOR_ID`, `PATIENT_ID`) "
+                + "VALUES (?,?,?,?,?)";
             }
-            else if(user.getSelectedItem() == "Doctor")
+            else if(select_usertype.getSelectedItem() == "Doctor")
             {
                insert = "INSERT INTO `APPOINTMENT`(`DATE`, `CHECKIN`, `CHECKOUT`,"
-                + " `DOCTOR_ID`) "
-                + "VALUES (?,?,?,?)";
+                + " `DOCTOR_ID`,`PATIENT_ID`) "
+                + "VALUES (?,?,?,?,?)";
             }
-            else if(user.getSelectedItem() == "Receptionist")
+            else if(select_usertype.getSelectedItem() == "Receptionist")
             {
                insert = "INSERT INTO `APPOINTMENT`(`DATE`, `CHECKIN`, `CHECKOUT`,"
-                + " `RECEPTIONIST_ID`) "
-                + "VALUES (?,?,?,?)";
+                + " `DOCTOR_ID`, `PATIENT_ID`, `RECEPTIONIST_ID`) "
+                + "VALUES (?,?,?,?,?,?)";
             }
             else
             {
@@ -455,17 +507,21 @@ public class Appointment extends javax.swing.JFrame {
 
            
             //fetch the seledte user id
-            if(user.getSelectedItem()== "Patient" )
-            {
-                ps.setInt(4, fetch_patient_id());
-            }
-            else if(user.getSelectedItem() == "Doctor")
+            if(select_usertype.getSelectedItem()== "Patient" )
             {
                 ps.setInt(4, fetch_doctor_id());
+                ps.setInt(5, fetch_patient_id());
             }
-            else if(user.getSelectedItem() == "Receptionist")
+            else if(select_usertype.getSelectedItem() == "Doctor")
             {
-                ps.setInt(4, fetch_receptionist_id());
+                ps.setInt(4, fetch_doctor_id());
+                ps.setInt(5, fetch_patient_id());
+            }
+            else if(select_usertype.getSelectedItem() == "Receptionist")
+            {
+                ps.setInt(4, fetch_doctor_id());
+                ps.setInt(5, fetch_patient_id());
+                ps.setInt(6, fetch_receptionist_id());
             }
             else
             {
@@ -488,18 +544,18 @@ public class Appointment extends javax.swing.JFrame {
     //fetch doctor id from Doctor table
     public int fetch_doctor_id()
     {
-        String fetch = "SELECT DOCTOR_ID FROM `DOCTOR` WHERE EMAIL =\"anderson@gmail.com\"";
-
-        return return_id(fetch);
+        String fetch = "SELECT DOCTOR_ID FROM `DOCTOR` WHERE PRACTICE_NUMBER =\"A525\"";
+        
+        return return_doctor_id(fetch);
     }
     //end fetch_doctor_id function
     
     //fetch patient id from patient table
     public int fetch_patient_id()
     {   
-        String fetch = "SELECT PATIENT_ID FROM `PATIENT` WHERE EMAIL =\"makhe@gmail.com\"";
+        String fetch = "SELECT PATIENT_ID FROM `PATIENT` WHERE EMAIL =\"mboka@gmail.com\"";
        
-        return return_id(fetch);
+        return return_patient_id(fetch);
     }
     //end of fetch_patient_id function
     
@@ -508,12 +564,12 @@ public class Appointment extends javax.swing.JFrame {
     {
         String fetch = "SELECT RECEPTIONIST_ID FROM `RECEPTIONIST` WHERE EMAIL =\"jenny@gmail.com\"";
       
-        return return_id(fetch);
+        return return_receptionist_id(fetch);
     }
     //end fetch_receptionist_id function
      
     //this function fetch id of a selected user
-    public int return_id(String fetch)
+    public int return_receptionist_id(String fetch)
     {
         try
         {
@@ -523,7 +579,7 @@ public class Appointment extends javax.swing.JFrame {
             ResultSet rs = p_s.executeQuery();
             if(rs.next())
             {
-                id = rs.getInt(1);
+                receptionist_id = rs.getInt(1);
                 
             }
         }
@@ -531,11 +587,176 @@ public class Appointment extends javax.swing.JFrame {
         {
             System.out.println("error");
         }
-        System.out.println("id: "+id);
+        System.out.println("receptionist_id: "+receptionist_id);
         
-        return id;
+        return receptionist_id;
     }
     //end of return_id function
+    
+        //this function fetch id of a selected user
+    public int return_patient_id(String fetch)
+    {
+        try
+        {
+            
+            p_s = Connect2database.getConnection().prepareStatement(fetch);
+
+            ResultSet rs = p_s.executeQuery();
+            if(rs.next())
+            {
+                patient_id = rs.getInt(1);
+                
+            }
+        }
+        catch(SQLException s)
+        {
+            System.out.println("error");
+        }
+        System.out.println("patient_id: "+patient_id);
+        
+        return patient_id;
+    }
+    //end of return_patient_id function
+    
+        //this function fetch doctor id of a selected user
+    public int return_doctor_id(String fetch)
+    {
+        try
+        {
+            
+            p_s = Connect2database.getConnection().prepareStatement(fetch);
+
+            ResultSet rs = p_s.executeQuery();
+            if(rs.next())
+            {
+                doctor_id = rs.getInt(1);                
+            }
+        }
+        catch(SQLException s)
+        {
+            System.out.println("error");
+        }
+        System.out.println("doctor_id: "+doctor_id);
+        
+        return doctor_id;
+    }
+    //end of return_id function
+
+    public void get_schedule()
+    {
+        PreparedStatement ps;
+        ResultSet rs;
+        //boolean correctness = false;
+       
+        Get_data get_data;
+        
+        String quiry = "SELECT* from  APPOINTMENT ";//`DATE`, `CHECKIN`, `CHECKOUT`,"
+                //+ " `DOCTOR_ID`, `PATIENT_ID`"
+                //+ " FROM `APPOINTMENT`";
+        
+        try
+        {
+            ps = Connect2database.getConnection().prepareStatement(quiry);
+
+            //ps.setString(1, "");
+
+            rs = ps.executeQuery();
+            
+            if(rs.next())
+            {
+                booking_date = rs.getString("DATE");
+                check_in = rs.getString("CHECKIN");
+                check_out = rs.getString("CHECKOUT");
+                patient_id = rs.getInt("PATIENT_ID");
+                doctor_id = rs.getInt("DOCTOR_ID");
+                System.out.println(booking_date);
+                get_data = new Get_data(booking_date,check_in,check_out,
+                patient_id,doctor_id);
+                list2.add(get_data);
+
+                //correctness = true;
+            }
+        }
+        catch(SQLException sq)
+        {
+            sq.getSQLState();
+        }
+
+    }  
+    
+    public void add_to_table()
+    {
+        
+        DefaultTableModel dtm = (DefaultTableModel)tblbookings.getModel();
+                
+        //Object[] obj = new Object();
+        /* DefaultTableModel model = new DefaultTableModel();
+        model.setColumnIdentifiers(new Object[]{"Booking_date",
+            "Check_in","Check_out","Patient_id", "Doctor_id"});
+        Object[] row = new Object[5];
+        
+        for(int r=0; r < list2.size();r++)
+        {
+            row[0] = list2.get(r).getBooking_date();
+            row[1] = list2.get(r).getCheck_in();
+            row[2] = list2.get(r).getCheck_out();
+            row[3] = list2.get(r).getPatient_id();
+            row[4] = list2.get(r).getDoctor_id();
+        }
+                        System.out.println("heloo");
+        tblbookings.setModel(model);*/
+        dtm.addRow(new Object[] {(booking_date)
+                    , check_in+"-"+check_out,                
+                    patient_name,"Dr. "+doctor_name});
+    
+    }
+    
+    public void fect_patient_name()
+    {
+        String fetch_name ="SELECT NAME, SURNAME FROM `PATIENT` WHERE PATIENT_ID=?";
+        
+        try
+        {
+            
+            p_s = Connect2database.getConnection().prepareStatement(fetch_name);
+            p_s.setInt(1, patient_id);
+            ResultSet rs = p_s.executeQuery();
+            if(rs.next())
+            {
+                patient_name = rs.getString("NAME");
+                patient_surname = rs.getString("SURNAME");                  
+            }
+        }
+        catch(SQLException s)
+        {
+            System.out.println("error");
+        }
+        System.out.println("patient_name: "+patient_name+" "+patient_surname);
+        
+    }
+    
+        public void fect_doctor_name()
+    {
+        String fetch_name ="SELECT SURNAME FROM `DOCTOR` WHERE DOCTOR_ID=?";
+        
+        try
+        {
+            
+            p_s = Connect2database.getConnection().prepareStatement(fetch_name);
+            p_s.setInt(1, doctor_id);
+            ResultSet rs = p_s.executeQuery();
+            if(rs.next())
+            {
+                doctor_name = rs.getString("SURNAME");                
+            }
+        }
+        catch(SQLException s)
+        {
+            System.out.println("error");
+        }
+        System.out.println("doctor_name: "+doctor_name);
+        
+    }
     
     
     //this function change the backgroung colour of a selected button
@@ -613,9 +834,10 @@ public class Appointment extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> select_dr_name;
+    private javax.swing.JComboBox<String> select_usertype;
     private javax.swing.JLabel show_dat;
-    private javax.swing.JComboBox<String> user;
+    private javax.swing.JTable tblbookings;
+    private javax.swing.JTextField txtf_patient_id;
     // End of variables declaration//GEN-END:variables
 }

@@ -22,13 +22,17 @@ public class Doctor extends javax.swing.JFrame {
     private String practice_no;
     private String password;   
     private String retyped;
-    
+    private String practice_number="";
     /**
      * Creates new form Doctor
      */
-    public Doctor(String activate) {
+    public Doctor(String practice_number) {
         initComponents();
-        System.out.println(activate);
+        this.practice_number = practice_number;
+        if(!this.practice_number.equals(""))
+                    pull_data();
+        
+
     }
 
     /**
@@ -56,6 +60,7 @@ public class Doctor extends javax.swing.JFrame {
         lbl_dr_pract_no = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         lblwarning = new javax.swing.JLabel();
+        goto_login1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -112,6 +117,14 @@ public class Doctor extends javax.swing.JFrame {
         lblwarning.setForeground(java.awt.Color.red);
         lblwarning.setText(".");
 
+        goto_login1.setForeground(java.awt.Color.red);
+        goto_login1.setText("            Already a user?");
+        goto_login1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goto_login1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -144,10 +157,15 @@ public class Doctor extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(141, 141, 141))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(goto_login1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(167, 167, 167))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +200,9 @@ public class Doctor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(goto_login1)
+                .addGap(36, 36, 36))
         );
 
         jPanel2.setBackground(new java.awt.Color(25, 25, 112));
@@ -195,6 +215,11 @@ public class Doctor extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jButton3.setForeground(java.awt.Color.white);
         jButton3.setText("Authorize");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -231,11 +256,10 @@ public class Doctor extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(584, 478));
+        setSize(new java.awt.Dimension(584, 535));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -306,6 +330,17 @@ public class Doctor extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        changeto_true();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void goto_login1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goto_login1MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_goto_login1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -399,11 +434,69 @@ public class Doctor extends javax.swing.JFrame {
          
          return exist;
      }
-    //end of check_prcticenumber() function
+    //end of check_practicenumber() function
+      
+    public void changeto_true()
+     {
+        PreparedStatement ps;
+        
+        String quiry = "UPDATE `DOCTOR` SET `AUTHORIZED`=? WHERE PRACTICE_NUMBER=?";
+        
+        try
+        {
+            ps = Connect2database.getConnection().prepareStatement(quiry);
+
+            ps.setString(1, "true");
+            ps.setString(2, practice_number);
+            
+            if(ps.executeUpdate()>0)
+            {
+                JOptionPane.showMessageDialog(null, "Doctor authorized ");
+            }
+        }
+        catch(SQLException sq)
+        {
+            sq.getSQLState();
+        }         
+     }
+    
+        
+    public void pull_data()
+    {
+        PreparedStatement ps;
+        ResultSet rs;
+        
+        String quiry = "SELECT NAME,SURNAME,PRACTICE_NUMBER,SPECIALIZATION FROM `DOCTOR`"
+                + " WHERE AUTHORIZED=?";
+        
+        try
+        {
+            ps = Connect2database.getConnection().prepareStatement(quiry);
+
+            ps.setString(1, "false");
+
+            rs = ps.executeQuery();
+                    System.out.println(practice_number);
+            if(rs.next())
+            {
+                lbl_dr_name.setText(rs.getString("NAME"));
+                lbl_dr_surname.setText(rs.getString("SURNAME"));
+                lbl_dr_specialization.setText(rs.getString("PRACTICE_NUMBER")); 
+                lbl_dr_pract_no.setText(rs.getString("SPECIALIZATION"));        
+            }
+        }
+        catch(SQLException sq)
+        {
+            sq.getSQLState();
+        }  
+    }
+     
      
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField dentist_password;
+    private javax.swing.JLabel goto_login;
+    private javax.swing.JLabel goto_login1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
