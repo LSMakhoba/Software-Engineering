@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.28)  8 OCT 2018 06:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.26)  8 OCT 2018 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -236,6 +236,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (./Project_Report.aux
 
+LaTeX Warning: Label `fig:login' multiply defined.
+
+
 LaTeX Warning: Label `fig:ERD' multiply defined.
 
 
@@ -356,26 +359,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...line {4.1}Scrum Roles}{24}{subsection.4.1}
+l.31 ...line {4.1}Scrum Roles}{25}{subsection.4.1}
                                                    [1])
 \tf@toc=\write4
 \openout4 = `Project_Report.toc'.
 
  [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
  [4]
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 83--100
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 81--98
 [] 
  []
 
 [5]
-Overfull \hbox (4.17911pt too wide) in paragraph at lines 106--108
+Overfull \hbox (4.17911pt too wide) in paragraph at lines 104--106
 []\OT1/cmr/m/n/10.95 https://www.bmc.com/blogs/software-requirements-specificat
 ion-how-
  []
@@ -383,21 +386,21 @@ ion-how-
 [6]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 120.
+(hyperref)                than one, level fixed on input line 118.
 
 [7]
 <new_patient_paper_form.jpeg, id=275, 893.3375pt x 1284.8pt>
 File: new_patient_paper_form.jpeg Graphic file (type jpg)
 <use new_patient_paper_form.jpeg>
-Package pdftex.def Info: new_patient_paper_form.jpeg  used on input line 178.
+Package pdftex.def Info: new_patient_paper_form.jpeg  used on input line 176.
 (pdftex.def)             Requested size: 205.20142pt x 295.1057pt.
 <patient_paper_form_med.jpeg, id=276, 902.37125pt x 1277.77374pt>
 File: patient_paper_form_med.jpeg Graphic file (type jpg)
 <use patient_paper_form_med.jpeg>
-Package pdftex.def Info: patient_paper_form_med.jpeg  used on input line 184.
+Package pdftex.def Info: patient_paper_form_med.jpeg  used on input line 182.
 (pdftex.def)             Requested size: 205.20142pt x 290.56725pt.
 
-Overfull \hbox (72.0044pt too wide) in paragraph at lines 176--188
+Overfull \hbox (72.0044pt too wide) in paragraph at lines 174--186
  []$[]$$[]$ 
  []
 
@@ -407,530 +410,527 @@ Overfull \hbox (72.0044pt too wide) in paragraph at lines 176--188
 [10]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 215.
+(hyperref)                than one, level fixed on input line 212.
 
 <architecture.png, id=290, 1516.66624pt x 1357.07pt>
 File: architecture.png Graphic file (type png)
 <use architecture.png>
-Package pdftex.def Info: architecture.png  used on input line 220.
+Package pdftex.def Info: architecture.png  used on input line 215.
 (pdftex.def)             Requested size: 431.9989pt x 386.5412pt.
 
-Overfull \hbox (71.9989pt too wide) in paragraph at lines 220--221
+Overfull \hbox (71.9989pt too wide) in paragraph at lines 215--216
  [][] 
  []
 
 <Logical_view.png, id=292, 1537.745pt x 964.60374pt>
 File: Logical_view.png Graphic file (type png)
 <use Logical_view.png>
-Package pdftex.def Info: Logical_view.png  used on input line 225.
+Package pdftex.def Info: Logical_view.png  used on input line 219.
 (pdftex.def)             Requested size: 431.9989pt x 270.98505pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<deployment_view_diagram.png, id=293, 904.88063pt x 444.15938pt>
+File: deployment_view_diagram.png Graphic file (type png)
+<use deployment_view_diagram.png>
+Package pdftex.def Info: deployment_view_diagram.png  used on input line 224.
+(pdftex.def)             Requested size: 431.9989pt x 212.04193pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [11 <./architecture.png>]
-<PATIENT_TABLE.png, id=299, 650.43pt x 294.09875pt>
+<PATIENT_TABLE.png, id=300, 650.43pt x 294.09875pt>
 File: PATIENT_TABLE.png Graphic file (type png)
 <use PATIENT_TABLE.png>
-Package pdftex.def Info: PATIENT_TABLE.png  used on input line 234.
+Package pdftex.def Info: PATIENT_TABLE.png  used on input line 232.
 (pdftex.def)             Requested size: 288.0011pt x 130.22507pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<DOCTOR_TABLE.png, id=300, 660.4675pt x 219.82124pt>
+<DOCTOR_TABLE.png, id=301, 660.4675pt x 219.82124pt>
 File: DOCTOR_TABLE.png Graphic file (type png)
 <use DOCTOR_TABLE.png>
-Package pdftex.def Info: DOCTOR_TABLE.png  used on input line 240.
+Package pdftex.def Info: DOCTOR_TABLE.png  used on input line 237.
 (pdftex.def)             Requested size: 251.9989pt x 83.8717pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<APPOINTMENT_TABLE.png, id=301, 669.50125pt x 218.8175pt>
+<APPOINTMENT_TABLE.png, id=302, 669.50125pt x 218.8175pt>
 File: APPOINTMENT_TABLE.png Graphic file (type png)
 <use APPOINTMENT_TABLE.png>
-Package pdftex.def Info: APPOINTMENT_TABLE.png  used on input line 247.
+Package pdftex.def Info: APPOINTMENT_TABLE.png  used on input line 242.
 (pdftex.def)             Requested size: 360.0pt x 117.66553pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: File `Dentist ERD.png' not found on input line 256.
-
-<Dentist ERD.png, id=302, 766.865pt x 557.08125pt>
-File: Dentist ERD.png Graphic file (type png)
-<use Dentist ERD.png>
-Package pdftex.def Info: Dentist ERD.png  used on input line 256.
+<"Dentist ERD".png, id=303, 766.865pt x 557.08125pt>
+File: "Dentist ERD".png Graphic file (type png)
+<use "Dentist ERD".png>
+Package pdftex.def Info: "Dentist ERD".png  used on input line 249.
 (pdftex.def)             Requested size: 360.0pt x 261.52222pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12 <./Logical_view.png>] [13 <./PATIENT_TABLE.png> <./DOCTOR_TABLE.png>]
-[14 <./APPOINTMENT_TABLE.png>] [15 <./Dentist ERD.png>]
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 347--363
+[12 <./Logical_view.png>] [13 <./deployment_view_diagram.png>] [14 <./PATIENT_T
+ABLE.png> <./DOCTOR_TABLE.png>]
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 332--348
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--363
+Underfull \hbox (badness 10000) in paragraph at lines 332--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--363
+Underfull \hbox (badness 10000) in paragraph at lines 332--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--363
+Underfull \hbox (badness 10000) in paragraph at lines 332--348
 
  []
 
-
-Underfull \hbox (badness 3302) in paragraph at lines 370--370
+[15 <./APPOINTMENT_TABLE.png>] [16 <./Dentist ERD.png>]
+Underfull \hbox (badness 3302) in paragraph at lines 355--355
 \OT1/cmr/m/n/10.95 data.This in-cludes when
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 370.
+LaTeX Warning: Command \textless invalid in math mode on input line 355.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 370.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 355.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 370.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 355.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 370.
+LaTeX Warning: Command \textless invalid in math mode on input line 355.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 370.
+LaTeX Warning: Command \textless invalid in math mode on input line 355.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 370.
+LaTeX Warning: Command \textless invalid in math mode on input line 355.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 355.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 355.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 355.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 355.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 []\OT1/cmr/m/n/10.95 Invoked by the Up-
  []
 
 
-Underfull \hbox (badness 8132) in paragraph at lines 370--371
+Underfull \hbox (badness 8132) in paragraph at lines 355--356
 \OT1/cmr/m/n/10.95 date Pa-tient use case.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 [][]$\OT1/cmr/m/n/10.95 include$[][]$ re-la-tion-
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 372--372
+Underfull \hbox (badness 1325) in paragraph at lines 357--357
 []\OT1/cmr/m/n/10.95 The Re-cep-tion-ist or Pa-
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 372.
+LaTeX Warning: Command \textless invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 372.
+LaTeX Warning: Command \textless invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 372.
+LaTeX Warning: Command \textless invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 372.
+LaTeX Warning: Command \textless invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 372.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 372.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 372.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 357.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 372.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 357.
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 372--373
+Underfull \hbox (badness 4819) in paragraph at lines 357--358
 \OT1/cmr/m/n/10.95 Read Pa-tient use case.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 []\OT1/cmr/bx/n/10.95 Create Ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 []\OT1/cmr/m/n/10.95 The Pa-tient,Receptionist
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 376--376
+Underfull \hbox (badness 5175) in paragraph at lines 361--361
 \OT1/cmr/m/n/10.95 or Doc-tor will in-ter-act
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 383.
+LaTeX Warning: Command \textless invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 383.
+LaTeX Warning: Command \textless invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 383.
+LaTeX Warning: Command \textless invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 383.
+LaTeX Warning: Command \textless invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 368.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 385.
+LaTeX Warning: Command \textless invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 385.
+LaTeX Warning: Command \textless invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 385.
+LaTeX Warning: Command \textless invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 385.
+LaTeX Warning: Command \textless invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 370.
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 385--386
+Underfull \hbox (badness 4543) in paragraph at lines 370--371
 \OT1/cmr/m/n/10.95 Read Ad-min-is-tra-tor use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--387
+Underfull \hbox (badness 10000) in paragraph at lines 372--372
 []\OT1/cmr/bx/n/10.95 Archive Ad-
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 387--387
+Underfull \hbox (badness 1629) in paragraph at lines 372--372
 \OT1/cmr/m/n/10.95 Ad-min-is-tra-tor to archive
  []
 
 
-Overfull \hbox (34.43306pt too wide) in paragraph at lines 364--395
+Overfull \hbox (34.43306pt too wide) in paragraph at lines 349--380
 [][]
  []
 
 
-Overfull \hbox (17.43306pt too wide) in paragraph at lines 364--395
+Overfull \hbox (17.43306pt too wide) in paragraph at lines 349--380
 [] 
  []
 
-[16] [17]
+[17] [18]
 Overfull \vbox (16.49973pt too high) has occurred while \output is active []
 
 
-[18]
-Underfull \hbox (badness 6725) in paragraph at lines 398--398
+[19]
+Underfull \hbox (badness 6725) in paragraph at lines 383--383
 []\OT1/cmr/m/n/10.95 The Doc-tor will in-ter-
  []
 
 
-Underfull \hbox (badness 2735) in paragraph at lines 398--398
+Underfull \hbox (badness 2735) in paragraph at lines 383--383
 \OT1/cmr/m/n/10.95 act with this use case.
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 398.
+LaTeX Warning: Command \textless invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 398.
+LaTeX Warning: Command \textless invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 398.
+LaTeX Warning: Command \textless invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 398.
+LaTeX Warning: Command \textless invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 398.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 398.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 398.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 398.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 383.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--400
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 []\OT1/cmr/m/n/10.95 The Doc-tor,Patient or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--400
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \OT1/cmr/m/n/10.95 In-volves view-ing and
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 400.
+LaTeX Warning: Command \textless invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 400.
+LaTeX Warning: Command \textless invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 400.
+LaTeX Warning: Command \textless invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 400.
+LaTeX Warning: Command \textless invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 400.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 400.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 400.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 400.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 385.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 402.
+LaTeX Warning: Command \textless invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 402.
+LaTeX Warning: Command \textless invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 402.
+LaTeX Warning: Command \textless invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 402.
+LaTeX Warning: Command \textless invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 402.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 402.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 402.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 387.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 402.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 387.
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 402--403
+Underfull \hbox (badness 6236) in paragraph at lines 387--388
 \OT1/cmr/m/n/10.95 Read Doc-tor use case.
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 404--404
+Underfull \hbox (badness 1354) in paragraph at lines 389--389
 \OT1/cmr/m/n/10.95 end of em-ploy-ment con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--406
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 []\OT1/cmr/bx/n/10.95 Generate Re-
  []
 
 
-Overfull \hbox (34.43306pt too wide) in paragraph at lines 396--409
+Overfull \hbox (34.43306pt too wide) in paragraph at lines 381--394
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
+Underfull \hbox (badness 10000) in paragraph at lines 404--404
 []\OT1/cmr/bx/n/10.95 Triggering
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
 []\OT1/cmr/bx/n/10.95 Brief de-scrip-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--425
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []\OT1/cmr/bx/n/10.95 Related use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []\OT1/cmr/bx/n/10.95 Stakeholders
  []
 
 
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 413--434
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 398--419
 [] 
  []
 
-[19] [20]
+[20] [21]
 Overfull \vbox (46.37257pt too high) has occurred while \output is active []
 
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 442--442
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 427--427
 []\OT1/cmr/bx/n/10.95 Triggering
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--444
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
 []\OT1/cmr/bx/n/10.95 Brief de-scrip-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--448
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
 []\OT1/cmr/bx/n/10.95 Related use
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 448--449
+Underfull \hbox (badness 1365) in paragraph at lines 433--434
 []\OT1/cmr/m/n/10.95 Read Pa-tient (in-cludes), cre-ate con-sul-ta-tion (ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--450
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
 []\OT1/cmr/bx/n/10.95 Stakeholders
  []
 
 
-Overfull \hbox (5.43306pt too wide) in paragraph at lines 436--457
+Overfull \hbox (5.43306pt too wide) in paragraph at lines 421--442
 [] 
  []
 
-[22]
-
-LaTeX Warning: File `Use Case Diagram.png' not found on input line 462.
-
-<Use Case Diagram.png, id=361, 675.52374pt x 754.82pt>
-File: Use Case Diagram.png Graphic file (type png)
-<use Use Case Diagram.png>
-Package pdftex.def Info: Use Case Diagram.png  used on input line 462.
+[23]
+<"Use Case Diagram".png, id=368, 675.52374pt x 754.82pt>
+File: "Use Case Diagram".png Graphic file (type png)
+<use "Use Case Diagram".png>
+Package pdftex.def Info: "Use Case Diagram".png  used on input line 447.
 (pdftex.def)             Requested size: 337.76105pt x 377.40909pt.
-
-Overfull \hbox (69.55864pt too wide) in paragraph at lines 462--463
- [][] 
- []
-
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-[23 <./Use Case Diagram.png>] [24]
-<PriorityList.png, id=373, 610.28pt x 338.26375pt>
+ [24 <./Use Case Diagram.png>] [25]
+<PriorityList.png, id=380, 610.28pt x 338.26375pt>
 File: PriorityList.png Graphic file (type png)
 <use PriorityList.png>
-Package pdftex.def Info: PriorityList.png  used on input line 539.
+Package pdftex.def Info: PriorityList.png  used on input line 520.
 (pdftex.def)             Requested size: 360.0pt x 199.54807pt.
- [25]
-<final.png, id=378, 723.70375pt x 482.80376pt>
-File: final.png Graphic file (type png)
-<use final.png>
-Package pdftex.def Info: final.png  used on input line 548.
-(pdftex.def)             Requested size: 360.0pt x 240.17099pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26 <./PriorityList.png>]
-<sprint1.PNG, id=385, 361.35pt x 216.81pt>
+<final.png, id=381, 723.70375pt x 482.80376pt>
+File: final.png Graphic file (type png)
+<use final.png>
+Package pdftex.def Info: final.png  used on input line 528.
+(pdftex.def)             Requested size: 360.0pt x 240.17099pt.
+[26]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27 <./PriorityList.png>]
+<sprint1.PNG, id=392, 361.35pt x 216.81pt>
 File: sprint1.PNG Graphic file (type png)
 <use sprint1.PNG>
-Package pdftex.def Info: sprint1.PNG  used on input line 557.
+Package pdftex.def Info: sprint1.PNG  used on input line 537.
 (pdftex.def)             Requested size: 360.0pt x 216.00224pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27 <./final.png>] [28 <./sprint1.PNG>]
-<sprint2.png, id=397, 717.68124pt x 427.5975pt>
+[28 <./final.png>] [29 <./sprint1.PNG>]
+<sprint2.png, id=404, 717.68124pt x 427.5975pt>
 File: sprint2.png Graphic file (type png)
 <use sprint2.png>
-Package pdftex.def Info: sprint2.png  used on input line 567.
+Package pdftex.def Info: sprint2.png  used on input line 547.
 (pdftex.def)             Requested size: 360.0pt x 214.49635pt.
-<sprint3.PNG, id=398, 360.59718pt x 218.31563pt>
+<sprint3.PNG, id=405, 360.59718pt x 218.31563pt>
 File: sprint3.PNG Graphic file (type png)
 <use sprint3.PNG>
-Package pdftex.def Info: sprint3.PNG  used on input line 576.
+Package pdftex.def Info: sprint3.PNG  used on input line 555.
 (pdftex.def)             Requested size: 360.0pt x 217.95529pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29 <./sprint2.png>] [30 <./sprint3.PNG>]
-<login.png, id=411, 401.5pt x 316.18124pt>
+[30 <./sprint2.png>] [31 <./sprint3.PNG>]
+<login.png, id=418, 401.5pt x 316.18124pt>
 File: login.png Graphic file (type png)
 <use login.png>
-Package pdftex.def Info: login.png  used on input line 594.
+Package pdftex.def Info: login.png  used on input line 572.
 (pdftex.def)             Requested size: 251.9989pt x 198.45226pt.
 
 
-LaTeX Warning: Hyper reference `sec:system_testing' on page 31 undefined on inp
-ut line 601.
+LaTeX Warning: Hyper reference `sec:system_testing' on page 32 undefined on inp
+ut line 579.
 
 
-LaTeX Warning: File `UI_create_ patient.png' not found on input line 605.
+LaTeX Warning: File `UI_create_ patient.png' not found on input line 583.
 
-<UI_create_ patient.png, id=412, 739.76375pt x 488.82625pt>
+<UI_create_ patient.png, id=419, 739.76375pt x 488.82625pt>
 File: UI_create_ patient.png Graphic file (type png)
 <use UI_create_ patient.png>
-Package pdftex.def Info: UI_create_ patient.png  used on input line 605.
+Package pdftex.def Info: UI_create_ patient.png  used on input line 583.
 (pdftex.def)             Requested size: 360.0pt x 237.886pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<patientmedicalcond.png, id=413, 917.4275pt x 435.6275pt>
+<patientmedicalcond.png, id=420, 917.4275pt x 435.6275pt>
 File: patientmedicalcond.png Graphic file (type png)
 <use patientmedicalcond.png>
-Package pdftex.def Info: patientmedicalcond.png  used on input line 612.
+Package pdftex.def Info: patientmedicalcond.png  used on input line 590.
 (pdftex.def)             Requested size: 360.0pt x 170.94429pt.
-
-LaTeX Warning: File `new dentist.png' not found on input line 619.
-
-<new dentist.png, id=414, 439.6425pt x 402.50375pt>
-File: new dentist.png Graphic file (type png)
-<use new dentist.png>
-Package pdftex.def Info: new dentist.png  used on input line 619.
+<"new dentist".png, id=421, 439.6425pt x 402.50375pt>
+File: "new dentist".png Graphic file (type png)
+<use "new dentist".png>
+Package pdftex.def Info: "new dentist".png  used on input line 597.
 (pdftex.def)             Requested size: 216.0022pt x 197.7506pt.
-[31
+[32
 
  <./login.png>]
 
@@ -939,107 +939,109 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<new_receptionist.png, id=421, 593.21625pt x 346.29375pt>
+<new_receptionist.png, id=428, 593.21625pt x 346.29375pt>
 File: new_receptionist.png Graphic file (type png)
 <use new_receptionist.png>
-Package pdftex.def Info: new_receptionist.png  used on input line 627.
+Package pdftex.def Info: new_receptionist.png  used on input line 605.
 (pdftex.def)             Requested size: 360.0pt x 210.16093pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32 <./UI_create_ patient.png>] [33
+[33 <./UI_create_ patient.png>] [34
 
- <./patientmedicalcond.png> <./new dentist.png>] [34 <./new_receptionist.png>]
-<receptionist_home.png, id=443, 577.15625pt x 407.5225pt>
+ <./patientmedicalcond.png> <./new dentist.png>] [35 <./new_receptionist.png>]
+<receptionist_home.png, id=450, 577.15625pt x 407.5225pt>
 File: receptionist_home.png Graphic file (type png)
 <use receptionist_home.png>
-Package pdftex.def Info: receptionist_home.png  used on input line 636.
+Package pdftex.def Info: receptionist_home.png  used on input line 614.
 (pdftex.def)             Requested size: 251.9989pt x 177.9362pt.
-<patient_home.png, id=444, 527.9725pt x 387.4475pt>
+<patient_home.png, id=451, 555.07375pt x 410.53375pt>
 File: patient_home.png Graphic file (type png)
 <use patient_home.png>
-Package pdftex.def Info: patient_home.png  used on input line 653.
-(pdftex.def)             Requested size: 251.9989pt x 184.92627pt.
+Package pdftex.def Info: patient_home.png  used on input line 631.
+(pdftex.def)             Requested size: 251.9989pt x 186.3797pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35
+[36
 
- <./receptionist_home.png>] [36 <./patient_home.png>]
-<dr_home.png, id=458, 681.54625pt x 396.48125pt>
+ <./receptionist_home.png>] [37 <./patient_home.png>]
+<dr_home.png, id=465, 681.54625pt x 396.48125pt>
 File: dr_home.png Graphic file (type png)
 <use dr_home.png>
-Package pdftex.def Info: dr_home.png  used on input line 670.
+Package pdftex.def Info: dr_home.png  used on input line 648.
 (pdftex.def)             Requested size: 251.9989pt x 146.59895pt.
- [37
+ [38
 
  <./dr_home.png>]
-<new_appointment.png, id=465, 920.43875pt x 479.7925pt>
+<new_appointment.png, id=472, 920.43875pt x 479.7925pt>
 File: new_appointment.png Graphic file (type png)
 <use new_appointment.png>
-Package pdftex.def Info: new_appointment.png  used on input line 688.
+Package pdftex.def Info: new_appointment.png  used on input line 666.
 (pdftex.def)             Requested size: 360.0pt x 187.66006pt.
-<appointment_table_php.png, id=466, 1311.90125pt x 586.19pt>
+<appointment_table_php.png, id=473, 1311.90125pt x 586.19pt>
 File: appointment_table_php.png Graphic file (type png)
 <use appointment_table_php.png>
-Package pdftex.def Info: appointment_table_php.png  used on input line 698.
+Package pdftex.def Info: appointment_table_php.png  used on input line 676.
 (pdftex.def)             Requested size: 360.0pt x 160.85838pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--704
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 
  []
 
-[38
+[39
 
  <./new_appointment.png>]
-<consultation.png, id=473, 736.7525pt x 457.71pt>
+<consultation.png, id=480, 736.7525pt x 457.71pt>
 File: consultation.png Graphic file (type png)
 <use consultation.png>
-Package pdftex.def Info: consultation.png  used on input line 708.
+Package pdftex.def Info: consultation.png  used on input line 686.
 (pdftex.def)             Requested size: 216.0022pt x 134.19217pt.
- [39 <./appointment_table_php.png> <./consultation.png>] [40]
-<Logins.png, id=486, 737.75626pt x 391.4625pt>
+ [40 <./appointment_table_php.png> <./consultation.png>] [41]
+<Logins.png, id=493, 737.75626pt x 391.4625pt>
 File: Logins.png Graphic file (type png)
 <use Logins.png>
-Package pdftex.def Info: Logins.png  used on input line 740.
+Package pdftex.def Info: Logins.png  used on input line 723.
 (pdftex.def)             Requested size: 360.0pt x 191.01788pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[41]
-<register.png, id=491, 758.835pt x 203.76125pt>
+ [42] [43 <./Logins.png>]
+<register.png, id=504, 758.835pt x 203.76125pt>
 File: register.png Graphic file (type png)
 <use register.png>
-Package pdftex.def Info: register.png  used on input line 749.
+Package pdftex.def Info: register.png  used on input line 731.
 (pdftex.def)             Requested size: 360.0pt x 96.66634pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 757.
- [42 <./Logins.png> <./register.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 757.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 738.
+ [44 <./register.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 738.
  (./Project_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 757.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 757.
-Package rerunfilecheck Info: File `Project_Report.out' has not changed.
-(rerunfilecheck)             Checksum: 2CD2A6C883773849D721D502C5C4E1C2;3216.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 738.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 738.
 
+
+Package rerunfilecheck Warning: File `Project_Report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Project_Report.out':
+(rerunfilecheck)             Before: 2CD2A6C883773849D721D502C5C4E1C2;3216
+(rerunfilecheck)             After:  5C5CE9A13B974B35870DDABE6DEE9B4F;3216.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 757.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 738.
  ) 
 Here is how much of TeX's memory you used:
- 7222 strings out of 492982
- 112547 string characters out of 6134896
- 200206 words of memory out of 5000000
- 10580 multiletter control sequences out of 15000+600000
+ 7230 strings out of 492982
+ 112787 string characters out of 6134896
+ 198222 words of memory out of 5000000
+ 10584 multiletter control sequences out of 15000+600000
  8503 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,10n,92p,690b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1050,10 +1052,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Project_Report.pdf (43 pages, 1198349 bytes).
+Output written on Project_Report.pdf (45 pages, 1317142 bytes).
 PDF statistics:
- 553 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 504 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
 
